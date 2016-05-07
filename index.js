@@ -1,12 +1,11 @@
-var qr = require('qr-image');  
-var express = require('express');
+var qr = require('qr-image'),
+	express = require('express'),
+	middleware = require('./middleware'),
+	app = express();
 
-var app = express();
-
-app.get('/', function(req, res) {  
-  var code = qr.image('https://www.youtube.com/watch?v=RXgY8o74t2w', { type: 'png' });
-  res.type('png');
-  code.pipe(res);
+middleware(app);
+app.use(express.static(__dirname + '/templates'));
+app.set('port', process.env.PORT || 3000);
+app.listen(app.get('port'), function(){
+	console.log('Listening at ' + app.get('port'));
 });
-
-app.listen(3000); 
