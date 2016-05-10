@@ -5,6 +5,7 @@ var express = require('express'),
 
 router = function(app){
 	r.get('/', h.home);
+	r.get('/form', h.form);
 	app.use(r);
 };
 module.exports = router;
