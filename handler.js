@@ -10,6 +10,9 @@ home = function(req, res){
 form = function(req, res){
 	res.render('form.html');
 };
+formsign = function(req, res){
+	res.render('formsign.html');
+};
 
 placeDetail = function(req, res) {
 	res.render('placeDetail.html',
@@ -25,7 +28,9 @@ handler = {
 
 	form: form,
 
-	placeDetail: placeDetail
+	placeDetail: placeDetail,
+    
+    formsign: formsign
 
 };
 

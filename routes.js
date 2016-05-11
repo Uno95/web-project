@@ -7,6 +7,7 @@ router = function(app){
 	r.get('/', h.home);
 
 	r.get('/form', h.form);
+	r.get('/formsign', h.formsign);
 	r.get('/place/:name/:id', h.placeDetail);
 
 	app.use(r);
