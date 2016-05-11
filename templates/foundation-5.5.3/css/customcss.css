@@ -1,3 +1,13 @@
+.cF{
+	width: 7%;
+	float: left;
+}
+
+.cS{
+	width: 93%;
+	float: left;
+}
+
 .atas1{
   margin-top: 80px ;
 }
@@ -16,3 +26,17 @@
 .signup{
 	margin-bottom: -5px;
 }
+
+.photo{
+	height: 405px;
+	width: 100%;
+}
+
+.place-coverImg{
+	height: 100%;
+	background-color: #eee;
+	background-position: 20% 80%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
