@@ -1,29 +1,35 @@
 {% extends "index.html" %}
 
 {% block content %}
+
 <form>
-  <div class="row atas1">
+    <div class="row atas1">
     <div class="large-3 columns">
       <p></p>
     </div>
     <div class="large-6 columns">
       <div class="signup-panel">
-        <p class="welcome"> Daftarkan Usaha Anda!</p>
+        <p class="welcome signup">Sign Up with <a href="#">Facebook</a> or <a href="#">Google</a></p>
+         <div class="row">
+                <div class="large-5 columns"><hr></div>
+                  <div class="large-2 columns or">or</div>
+                  <div class="large-5 columns"><hr></div>
+         </div>
         <form>
           <div class="row collapse">
             <div class="small-2  columns">
               <span class="prefix"><i class="fi-torso-female"></i></span>
             </div>
             <div class="small-10  columns">
-              <input type="text" placeholder="Nama Perusahaan Anda">
+              <input type="text" placeholder="Nama Lengkap Anda">
             </div>
           </div>
           <div class="row collapse">
-            <div class="small-2 columns">
-              <span class="prefix"><i class="fi-mail"></i></span>
+            <div class="small-2  columns">
+              <span class="prefix"><i class="fi-torso-female"></i></span>
             </div>
             <div class="small-10  columns">
-              <input type="text" placeholder="Alamat Perusahaan">
+              <input type="text" placeholder="Alamat Lengkap Anda">
             </div>
           </div>
           <div class="row collapse">
@@ -31,7 +37,7 @@
               <span class="prefix"><i class="fi-lock"></i></span>
             </div>
             <div class="small-10 columns ">
-              <input type="text" placeholder="Nama Pemilik Perusahaan">
+              <input type="text" placeholder="Nomor Telepon Anda">
             </div>
           </div>
           <div class="row collapse">
@@ -39,7 +45,7 @@
               <span class="prefix"><i class="fi-lock"></i></span>
             </div>
             <div class="small-10 columns ">
-              <input type="text" placeholder="Email">
+              <input type="text" placeholder="Email Anda">
             </div>
           </div>
           <div class="row collapse">
@@ -47,7 +53,7 @@
               <span class="prefix"><i class="fi-lock"></i></span>
             </div>
             <div class="small-10 columns ">
-              <input type="text" placeholder="Nomor Handphone">
+              <input type="text" placeholder="Username Anda">
             </div>
           </div>
           <div class="row collapse">
@@ -55,18 +61,28 @@
               <span class="prefix"><i class="fi-lock"></i></span>
             </div>
             <div class="small-10 columns ">
-                <textarea placeholder="Kerangan"></textarea>
+              <input type="password" placeholder="Password">
+            </div>
+          </div>
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="Konfirmasi Password">
             </div>
           </div>
         </form>
         <a href="#" class="button btndaftar">Daftar</a>
       </div>
     </div>
+
+
     <div class="large-3 columns">
-      <p></p>
-    </div>
+    <p></p>
    </div>
 
 
 </form>
+
 {% endblock %}
