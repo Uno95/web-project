@@ -13,6 +13,9 @@ form = function(req, res){
 formsign = function(req, res){
 	res.render('formsign.html');
 };
+login = function(req, res){
+	res.render('login.html');
+};
 
 placeDetail = function(req, res) {
 	res.render('placeDetail.html',
@@ -30,7 +33,9 @@ handler = {
 
 	placeDetail: placeDetail,
     
-    formsign: formsign
+    formsign: formsign,
+
+    login: login
 
 };
 
