@@ -5,9 +5,9 @@ var express = require('express'),
 
 router = function(app){
 	r.get('/', h.home);
-
 	r.get('/form', h.form);
 	r.get('/formsign', h.formsign);
+	//r.get('/user/:name', h.userpage);
 	r.get('/place/:name/:id', h.placeDetail);
 
 	app.use(r);

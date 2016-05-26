@@ -1,11 +1,9 @@
 .cF{
-	width: 7%;
-	float: left;
+	width:auto;
 }
 
-.cS{
-	width: 93%;
-	float: left;
+.top-bar .toggle-topbar.menu-icon a span::after{
+	box-shadow: 0 0 0 1px #000,0 7px 0 1px #000,0 14px 0 1px #000
 }
 
 .atas1{
@@ -27,6 +25,40 @@
 	margin-bottom: -5px;
 }
 
+.blur{
+	color: #777!important;
+}
+
+.top-bar{
+	background: #fff;
+	border-bottom: 2px solid #ccc;
+}
+
+.name a{
+	color: #333!important;
+}
+
+.top-bar-section ul li,
+.top-bar-section ul li a:not(.button){
+	background: none!important;
+	color: #333;
+	transition: ease .3s;
+}
+
+.top-bar-section ul li:not(.active) a:hover{
+	background:crimson!important; 
+}
+
+.top-bar-section ul li.active{
+	background: crimson!important;
+}
+.top-bar-section ul li.active:hover{
+	background: none!important;
+}
+.top-bar-section ul li.active a:hover{
+	color: crimson!important;
+}
+
 .photo{
 	height: 405px;
 	width: 100%;
@@ -40,3 +72,18 @@
 	background-size: 100%;
 }
 
+.logo{
+	margin-top: 150px;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 10px 20px;
+	text-align: center;
+}
+
+.logo img{
+}
+
+.logo h2, .logo p{
+	color: #fff;
+	margin: 0;
+}

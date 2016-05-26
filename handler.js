@@ -14,6 +14,13 @@ formsign = function(req, res){
 	res.render('formsign.html');
 };
 
+userpage = function (req, res) {
+	res.render('user_page.html',{
+			name: req.params.username
+		}
+	);
+};
+
 placeDetail = function(req, res) {
 	res.render('placeDetail.html',
 		{
@@ -25,11 +32,9 @@ placeDetail = function(req, res) {
 
 handler = {
 	home: home,
-
 	form: form,
-
-	placeDetail: placeDetail,
-    
+	user: userpage,
+	placeDetail: placeDetail,    
     formsign: formsign
 
 };
