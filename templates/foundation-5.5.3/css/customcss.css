@@ -68,6 +68,20 @@
 @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 html, body {
   background: #FAFAFA; }
+.card1{
+	margin: 8rem 0.4rem 20px 0.4rem;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #272727;
+  border-radius: 2px; 
+}.card1 h1{
+	text-align: center;
+	font-size: 57px;
+}.card1 p{
+	text-align: center;
+	color: gray;
+}
 
 .card {
 	width: 20rem;

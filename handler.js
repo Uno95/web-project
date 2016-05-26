@@ -16,6 +16,16 @@ formsign = function(req, res){
 login = function(req, res){
 	res.render('login.html');
 };
+berhasilregister = function(req, res){
+	res.render('registerberhasil.html');
+};
+hasilpencarian = function(req, res) {
+	res.render('hasilpencarian.html',
+		{
+			name: req.params.name
+		}
+	);
+};
 
 placeDetail = function(req, res) {
 	res.render('placeDetail.html',
@@ -35,7 +45,11 @@ handler = {
     
     formsign: formsign,
 
-    login: login
+    login: login,
+
+    berhasilregister: berhasilregister,
+
+    hasilpencarian: hasilpencarian
 
 };
 
