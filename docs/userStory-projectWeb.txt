@@ -15,11 +15,10 @@ Tampilkan detail Cafe/Restoran(Jam Buka, fasilitas, dll)
 Tampilkan Kupon promo dari setiap Cafe/Restoran & makanan/minuman kedalam bentuk QR code.
 Tampilkan daftar menu dan harga dari setiap Cafe/Restoran.
 Tampilkan comments/rattings makanan/minuman di setiap Cafe/Restoran.
-Tampilkan poin pengguna setiap melakukan comments/rattings dari suatu Cafe/Restoran/makanan/minuman
 Pencarian Cafe/Restoran berdasarkan lokasi.
 mengikuti update dari Cafe/Restoran
 Pemberitahuan menu baru makanan/minuman Cafe/Restoran yang diikuti(follow).
 Pemberitahuan kupon promo makanan/minuman Cafe/Restoran yang diikuti(follow).
-Hitung perolehan poin setiap pengguna.
 pengguna dapat mendaftar & login
 (Urutkan berdasarkan paling banyak comment/ paling sering dilihat/ ratting tertinggi/ terlaris)
+Pemberitahuan user yang sedang makan disuatu tempat berdasarkan user yang telah di folow
