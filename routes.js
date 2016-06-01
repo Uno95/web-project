@@ -5,10 +5,10 @@ var express = require('express'),
 
 router = function(app){
 	r.get('/', h.home);
-
 	r.get('/form', h.form);
 	r.get('/formsign', h.formsign);
 	r.get('/place/:name/:id', h.placeDetail);
+	r.get('/beranda/:username', h.userpage);
 
 	app.use(r);
 };
