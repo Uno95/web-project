@@ -7,6 +7,9 @@ router = function(app){
 	r.get('/', h.home);
 	r.get('/form', h.form);
 	r.get('/formsign', h.formsign);
+	r.get('/login', h.login);
+	r.get('/berhasilregister', h.berhasilregister);
+	r.get('/hasilpencarian/:name', h.hasilpencarian);
 	r.get('/place/:name/:id', h.placeDetail);
 	r.get('/beranda/:username', h.userpage);
 

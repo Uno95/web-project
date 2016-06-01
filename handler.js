@@ -13,11 +13,16 @@ form = function(req, res){
 formsign = function(req, res){
 	res.render('formsign.html');
 };
-
-userpage = function (req, res) {
-	res.render('userpage.html',
+login = function(req, res){
+	res.render('login.html');
+};
+berhasilregister = function(req, res){
+	res.render('registerberhasil.html');
+};
+hasilpencarian = function(req, res) {
+	res.render('hasilpencarian.html',
 		{
-			name: req.params.username
+			name: req.params.name
 		}
 	);
 };
@@ -33,10 +38,18 @@ placeDetail = function(req, res) {
 
 handler = {
 	home: home,
+
 	form: form,
-	userpage: userpage,
-	placeDetail: placeDetail,    
-    formsign: formsign
+
+	placeDetail: placeDetail,
+    
+    formsign: formsign,
+
+    login: login,
+
+    berhasilregister: berhasilregister,
+
+    hasilpencarian: hasilpencarian
 
 };
 
