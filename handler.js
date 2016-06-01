@@ -27,6 +27,14 @@ hasilpencarian = function(req, res) {
 	);
 };
 
+userpage = function (req, res) {
+	res.render('userpage.html',
+		{
+			name: req.params.username
+		}
+	);
+};
+
 placeDetail = function(req, res) {
 	res.render('placeDetail.html',
 		{
@@ -38,19 +46,13 @@ placeDetail = function(req, res) {
 
 handler = {
 	home: home,
-
 	form: form,
-
 	placeDetail: placeDetail,
-    
     formsign: formsign,
-
+    userpage: userpage,
     login: login,
-
     berhasilregister: berhasilregister,
-
     hasilpencarian: hasilpencarian
-
 };
 
 module.exports = handler;

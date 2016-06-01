@@ -12,7 +12,6 @@ router = function(app){
 	r.get('/hasilpencarian/:name', h.hasilpencarian);
 	r.get('/place/:name/:id', h.placeDetail);
 	r.get('/beranda/:username', h.userpage);
-
 	app.use(r);
 };
 module.exports = router;
