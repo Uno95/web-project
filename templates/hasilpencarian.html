@@ -1,5 +1,12 @@
 {% extends "index.html" %}
 
+{% block scriptAPI %}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1NuSX2l9zO2Ya31HiBgIFPaShHu-Yrvk&callback=initMap"
+	async defer></script>
+	<script src="/foundation-5.5.3/js/mapApi.js"></script>
+	<script src="/foundation-5.5.3/js/fsAPI.js"></script>
+{% endblock %}
+
 {% block title %}Tempat{% endblock %}
 
 {% block cover %}
@@ -7,22 +14,19 @@
 {% endblock %}
 
 {% block content %}
+
 <div class="photo">
-	<div class="place-coverImg" 
-		style="background-image:url(/map.jpg)">
+	<div class="place-coverImg">
+		<div id="map-canvas"></div>
 	</div>
 </div>
-
-			<div id="map-canvas"></div>
 <div class="wrapper">
-	<h1>Hasil Pencarian : {{ name }}</h1>
+	<div id="resLbl">Hasil Pencarian : <span id="resName">{{ name }}</span></div>
 	<div class="row">
 		<div class="large-4 columns card">
 			<a href="#" class="th">
-				<img src="http://placehold.it/2000x750" alt="" class="thumbnail">		
+				<img src="http://placehold.it/2000x750" alt="" class="thumbnail">
 			</a>
-
-
 			<div class="row">
 			<div class="columns">
 			<h5 class="left">KongBox</h5>
@@ -36,7 +40,7 @@
 		</div>
 		<div class="large-4 columns card">
 			<a href="#" class="th">
-				<img src="http://placehold.it/2000x750" alt="" class="thumbnail">		
+				<img src="http://placehold.it/2000x750" alt="" class="thumbnail">
 			</a>
 			<div class="row">
 			<div class="columns">
@@ -50,7 +54,7 @@
 		</div>
 		<div class="large-4 columns card">
 			<a href="#" class="th">
-				<img src="http://placehold.it/2000x750" alt="" class="thumbnail">		
+				<img src="http://placehold.it/2000x750" alt="" class="thumbnail">
 			</a>
 			<div class="row">
 			<div class="columns">
@@ -62,8 +66,7 @@
 			<p class="left">Rp.55.000,00</p>
 			<a href="#" class="button expand">Buy</a>
 		</div>
-		
+
 	</div>
 </div>
-
 {% endblock %}

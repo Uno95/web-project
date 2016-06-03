@@ -11,5 +11,8 @@
     "url": "https://github.com/Uno95/web-project/blob/master/userStory-projectWeb.txt"
   },
   "author": "w3b5",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^4.5.5"
+  }
 }

@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="/foundation-5.5.3/css/customcss.css">
 	<link href="/foundation-5.5.3/fonts/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
 	<script src="/foundation-5.5.3/js/jquery-2.2.3.min.js"></script>
-	<script src="/foundation-5.5.3/js/custom.js"></script>
 </head>
 <body>
 	<div class="main-wrapper">
@@ -27,14 +26,19 @@
 			{% include "footer.html" %}
 		</footer>
 	</div>
-	
-	
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1NuSX2l9zO2Ya31HiBgIFPaShHu-Yrvk&callback=initMap"
-    async defer></script>
-    <script src="/foundation-5.5.3/js/mapApi.js"></script>
+
+
     <script src="/foundation-5.5.3/js/foundation.min.js"></script>
     	<script>
     		$(document).foundation();
     	</script>
+
+	<script src="/foundation-5.5.3/js/foundation.min.js"></script>
+	<script src="/foundation-5.5.3/js/custom.js"></script>
+	{% block scriptAPI %}
+	{% endblock %}
+	<script>
+		$(document).foundation();
+	</script>
 </body>
 </html>
