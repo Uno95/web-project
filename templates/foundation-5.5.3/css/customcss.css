@@ -67,7 +67,14 @@
 
 @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 html, body {
+	height: 100%;
+        margin: 0;
+        padding: 0;
   background: #FAFAFA; }
+      
+      #map-canvas {
+        height: 100%;
+      }
 .card1{
 	margin: 8rem 0.4rem 20px 0.4rem;
   font-family: 'Roboto', sans-serif;
