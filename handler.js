@@ -1,9 +1,5 @@
 var handler, props;
 
-// var props = {
-// 	name : req.params.name
-// }
-
 home = function(req, res){
 	res.render('home.html');
 };
@@ -19,6 +15,7 @@ login = function(req, res){
 berhasilregister = function(req, res){
 	res.render('registerberhasil.html');
 };
+
 hasilpencarian = function(req, res) {
 	res.render('hasilpencarian.html',
 		{

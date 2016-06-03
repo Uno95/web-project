@@ -1,9 +1,11 @@
-var address;
+var addressVal = lt = lg  = "";
 
 $(document).ready(function(){
 	$("#sBtn").click(function() {
-		address = $("#address").val();
-		console.log(address);
-		window.location.assign("http://localhost:3000/hasilpencarian/" + address);
+		addressSelected = $(":selected")
+		addressVal = addressSelected.text();
+		var where = addressVal;
+		console.log(where);
+		window.location.assign("http://localhost:3000/hasilpencarian/" + addressVal);
 	});
 });

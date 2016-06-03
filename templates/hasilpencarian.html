@@ -1,5 +1,9 @@
 {% extends "index.html" %}
 
+{% block scriptAPI %}
+<script src="/foundation-5.5.3/js/fsAPI.js"></script>
+{% endblock %}
+
 {% block title %}Tempat{% endblock %}
 
 {% block cover %}
@@ -13,7 +17,7 @@
 	</div>
 </div>
 <div class="wrapper">
-	<h1>Hasil Pencarian : {{ name }}</h1>
+	<div id="resLbl">Hasil Pencarian : <span id="resName">{{ name }}</span></div>
 	<div class="row">
 		<div class="large-4 columns card">
 			<a href="#" class="th">

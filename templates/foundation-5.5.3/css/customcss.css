@@ -1,11 +1,11 @@
 .cF{
-	width: 7%;
-	float: left;
+  width: 7%;
+  float: left;
 }
 
 .cS{
-	width: 93%;
-	float: left;
+  width: 93%;
+  float: left;
 }
 
 .atas1{
@@ -24,7 +24,7 @@
     margin-top: 5px;
 }
 .signup{
-	margin-bottom: -5px;
+  margin-bottom: -5px;
 }
 
 .customnav, .top-bar-section ul li,
@@ -48,49 +48,53 @@
 
 
 .photo{
-	height: 405px;
-	width: 100%;
+  height: 405px;
+  width: 100%;
 }
 
 .place-coverImg{
-	height: 100%;
-	background-color: #eee;
-	background-position: 20% 80%;
-	background-repeat: no-repeat;
-	background-size: 100%;
+  height: 100%;
+  background-color: #eee;
+  background-position: 20% 80%;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .imgqr{
-	width: 2rem;
-	height: 2rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 html, body {
+<<<<<<< HEAD
   background: #FAFAFA; 
+=======
+  background: #FAFAFA; }
 .card1{
-	margin: 8rem 0.4rem 20px 0.4rem;
+  margin: 8rem 0.4rem 20px 0.4rem;
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   color: #272727;
   border-radius: 2px; 
 }.card1 h1{
-	text-align: center;
-	font-size: 57px;
+  text-align: center;
+  font-size: 57px;
 }.card1 p{
-	text-align: center;
-	color: gray;
+  text-align: center;
+  color: gray;
 }
 
 .card {
-	width: 20rem;
-	margin: 0 0.4rem 20px 0.4rem;
+  width: 20rem;
+  margin: 0 0.4rem 20px 0.4rem;
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   color: #272727;
   border-radius: 2px; }
+<<<<<<< HEAD
 .card .title {
   line-height: 3rem;
   font-size: 1.5rem;
@@ -102,7 +106,7 @@ html, body {
   border-radius: 0 0 2px 2px; 
 }
 .card p {
-    margin: 0 55% 0 0; }
+  margin: 0; 
 }
 .card .action {
   border-top: 1px solid rgba(160, 160, 160, 0.2);
@@ -134,6 +138,35 @@ html, body {
   padding-bottom: 20px;
   margin-bottom: 10px;
 }
+=======
+  .card .title {
+    line-height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 300; }
+  .card .content {
+    padding: 1.3rem;
+    font-weight: 300;
+    border-radius: 0 0 2px 2px; }
+  .card p {
+    margin: 0 55% 0 0; }
+  .card .action {
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 1.3rem; }
+  .card a {
+    margin-top: 1.3rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none; }
+  .card .image {
+    position: relative; }
+    .card .image .title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 1.3rem;
+      color: #fff; }
+    .card .image img {
+      border-radius: 2px 2px 0 0; }
 
 .userHead{
   margin-top: -50px;
@@ -154,4 +187,15 @@ html, body {
   margin-top: 15px;
   text-shadow: 2px 2px 2px #333;
   text-transform: capitalize;
+}
+
+.searchBox{
+  margin-left: 30px;
+}
+
+#titleS{
+  font-weight: bolder;
+  font-size: 14px;
+  padding-top: 10px;
+  margin-bottom: 0;
 }
