@@ -23,5 +23,6 @@ $.getJSON(gecodeAPI, function(json) {
 
 		console.log("Lat: "+lt+" "+"Long: "+lg);
 	}
+	initMap(lt, lg);
 	console.log(locationObj);
 });
