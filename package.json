@@ -13,6 +13,7 @@
   "author": "w3b5",
   "license": "ISC",
   "dependencies": {
+    "oauthio": "^0.3.3",
     "pg": "^4.5.5"
   }
 }
