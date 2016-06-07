@@ -1,14 +1,17 @@
 {% extends "index.html" %}
 
+{% block scriptAPI %}
+
+            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="/foundation-5.5.3/js/add_addrees.js"></script>
+{% endblock %}
+
 {% block title %}Mendaftar Usaha{% endblock %}
 
 {% block content %}
 <form>
   <div class="row atas1">
-    <div class="large-3 columns">
-      <p></p>
-    </div>
-    <div class="large-6 columns">
+      <div class="large-6 columns">
       <div class="signup-panel">
         <p class="welcome"> Daftarkan Usaha Anda!</p>
         <form>
@@ -21,11 +24,13 @@
             </div>
           </div>
           <div class="row collapse">
-            <div class="small-2 columns">
+            <div class="small-2 columns ">
               <span class="prefix"><i class="mdi mdi-map-marker"></i></span>
             </div>
-            <div class="small-10  columns">
-              <input type="text" placeholder="Alamat Perusahaan">
+            <div class="small-10 columns ">
+              <input id="address" disabled  type="text"/>
+            <input type="hidden" id="latitude" placeholder="Latitude"/>
+            <input type="hidden" id="longitude" placeholder="Longitude"/>
             </div>
           </div>
           <div class="row collapse">
@@ -72,9 +77,14 @@
         <a href="#" class="button expand">Daftar</a>
       </div>
     </div>
-    <div class="large-3 columns">
-      <p></p>
+    <div class="large-6 columns">
+      <p>Pilih lokasi Anda!</p>
+      <div id="myMap"></div><br/>
+        
     </div>
+    <!--<div class="large-3 columns">
+      <p></p>
+    </div>-->
    </div>
 
 
