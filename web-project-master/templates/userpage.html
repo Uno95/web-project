@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block title %}{{ name }}{% endblock %}
+
+
+{% block cover %}
+<div class="photo">
+	<div class="place-coverImg"
+			style="background-image:url(/gyros-1547668-1598x1208.jpg)">
+	</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="usercontent row small-10 large-10">
+	<div class="userHead">
+		<div class="userImg left"
+			style="background-image:url(/example5.jpg)"></div>
+		<div class="username left">
+			<h3>{{ name }}</h3>
+		</div>
+	</div>
+	<div class="UserCtn row">
+		<div class="fsec">
+			<h3>Kupon Terbaru</h3>
+			<div class="itemCtn"></div>
+		</div>
+		<div class="ssec"></div>
+	</div>
+</div>
+{% endblock %}
