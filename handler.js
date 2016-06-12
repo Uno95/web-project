@@ -1,21 +1,32 @@
 var handler, props;
 
+//show landing page
 home = function(req, res){
 	res.render('home.html');
 };
+
+//show form sign up for company
 form = function(req, res){
 	res.render('form.html');
 };
+
+//show form sign up for user
 formsign = function(req, res){
 	res.render('formsign.html');
 };
+
+
+//show form sign in for user
 login = function(req, res){
 	res.render('login.html');
 };
+
+//registers success
 berhasilregister = function(req, res){
 	res.render('registerberhasil.html');
 };
 
+//show search result page
 hasilpencarian = function(req, res) {
 	res.render('hasilpencarian.html',
 		{

@@ -13,7 +13,15 @@
   "author": "w3b5",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "express-session": "^1.13.0",
+    "mongoose": "^4.4.20",
     "oauthio": "^0.3.3",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "pg": "^4.5.5"
   }
 }
