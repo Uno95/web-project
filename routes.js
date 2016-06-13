@@ -19,6 +19,18 @@ router = function(app, passport){
 	    failureFlash : true // allow flash messages
 	}));
 
+	r.post('/loginp',passport.authenticate('local-login', {
+	    successRedirect : '/userpage', // redirect to the secure profile section
+	    failureRedirect : '/login', // redirect back to the signup page if there is an error
+	    failureFlash : true // allow flash messages
+	}));
+
 	app.use(r);
 };
 module.exports = router;
+
+function isLoggedin(req,res,next){
+	if(req.isAuthenticated())
+		return next();
+	res.redirect('/');
+}

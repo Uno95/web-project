@@ -3,6 +3,7 @@ var LocalStrategy    = require('passport-local').Strategy;
 
 // load up the user model
 var User       = require('../models/user');
+var UserAdmin       = require('../models/useradmin');
 
 module.exports = function(passport) {
 
@@ -47,7 +48,7 @@ module.exports = function(passport) {
                 // if no user is found, return the message
                 if (!user)
                     return done(null, false, req.flash('loginMessage', 'No user found.'));
-
+                    console.log("No user found");
                 if (!user.validPassword(password))
                     return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.'));
 
@@ -86,8 +87,14 @@ module.exports = function(passport) {
                         return done(null, false, req.flash('signupMessage', 'That email is already taken.'));
                     } else {
 
+                        var param            = req.body.param;
                         // create the user
-                        var newUser            = new User();
+                        if(param=="newadmin"){
+                          var newUser            = new UserAdmin();
+                        }
+                        else {
+                          var newUser            = new User();
+                        }
 
                         newUser.local.email    = email;
                         newUser.local.password = newUser.generateHash(password);
@@ -113,7 +120,7 @@ module.exports = function(passport) {
                 User.findOne({ 'local.email' :  email }, function(err, user) {
                     if (err)
                         return done(err);
-                    
+
                     if (user) {
                         return done(null, false, req.flash('loginMessage', 'That email is already taken.'));
                         // Using 'loginMessage instead of signupMessage because it's used by /connect/local'
@@ -124,7 +131,7 @@ module.exports = function(passport) {
                         user.save(function (err) {
                             if (err)
                                 return done(err);
-                            
+
                             return done(null,user);
                         });
                     }

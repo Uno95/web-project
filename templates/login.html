@@ -12,17 +12,24 @@
     <div class="signup-panel">
       <p class="welcome signup">Login with <a href="#">Facebook</a> or <a href="#">Google</a></p>
       <div class="row">
-        <div class="large-5 columns"><hr></div>
+        <div class="large-5 columns">
+          <hr>
+        </div>
         <div class="large-2 columns or">or</div>
-        <div class="large-5 columns"><hr></div>
+        <div class="large-5 columns">
+          <hr>
+        </div>
       </div>
-      <form>
+      {% if (message.length > 0) %}
+        <div class="">{{ message }}</div>
+      {% endif %}
+      <form action="/loginp" method="post">
         <div class="row collapse">
           <div class="small-2 columns ">
             <span class="prefix"><i class="mdi mdi-email"></i></span>
           </div>
           <div class="small-10 columns ">
-            <input type="text" placeholder="Email Anda">
+            <input type="text" name="email" placeholder="Email Anda">
           </div>
         </div>
         <div class="row collapse">
@@ -30,11 +37,11 @@
             <span class="prefix"><i class="mdi mdi-lock"></i></span>
           </div>
           <div class="small-10 columns ">
-            <input type="password" placeholder="Password">
+            <input type="password" name="password" placeholder="Password">
           </div>
         </div>
+        <input type="submit" class="button expand" value="Daftar" />
       </form>
-      <a href="#" class="button expand">Login</a>
     </div>
   </div>
 
@@ -45,4 +52,4 @@
 
 
 
-{% endblock %}
+  {% endblock %}
