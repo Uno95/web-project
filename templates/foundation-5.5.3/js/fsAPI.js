@@ -14,16 +14,17 @@ var dataAPI = "https://api.mlab.com/api/1/databases/d_coups/collections/useradmi
 $.getJSON(dataAPI, function(json) {
 	$.each(json, function(i, field){
 		obj.push(field);
-		locProps.lat=field.local.lat;
-		locProps.lng=field.local.lng;
+		locProps.lat=parseFloat(field.local.lat);
+		locProps.lng=parseFloat(field.local.lng);
 		
 		//console.log(latitude + " " + longitude);
 		locationObj.push(locProps);
 	});
 	for (var x = 0; x < obj.length; x++) {
 		initMap(lt,lg,obj.length);
-			setMarkers(parseInt(obj[x].local.lat),parseInt(obj[x].local.lng),obj.length);
+			setMarkers(parseFloat(obj[x].local.lat),parseFloat(obj[x].local.lng),obj.length);
 		}
+//	console.log(locationObj);
 	console.log(obj);
 		
 		/*console.log(obj);*/
