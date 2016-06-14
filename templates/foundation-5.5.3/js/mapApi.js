@@ -5,7 +5,7 @@ function initMap(lt, lg,len) {
   });
 
   for(i=0;i<len;i++){
-      setMarkers(map,test[i],testt[i],loc,len);
+      setMarkers(map,latitude[i],longitude[i],loc,len);
   }
   woe = lt;
 }
