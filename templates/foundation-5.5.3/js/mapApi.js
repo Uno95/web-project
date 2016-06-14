@@ -5,16 +5,16 @@ function initMap(lt, lg,len) {
   });
 
   for(i=0;i<len;i++){
-      setMarkers(map,latitude[i],longitude[i],loc,len);
+      setMarkers(map,parseInt(obj[i].local.lat),parseInt(obj[i].local.lng),len);
+      //console.log(parseInt(latitude[i]),parseInt(longitude[i]));
   }
-  woe = lt;
 }
-var woe = [];
+
 // Data for the markers consisting of a name, a LatLng and a zIndex for the
 // order in which these markers should display on top of each other.
 
 
-function setMarkers(map,lt,lg,loc,len) {
+function setMarkers(map,lt,lg,len) {
   // Adds markers to the map.
 
   // Marker sizes are expressed as a Size of X,Y where the origin of the image

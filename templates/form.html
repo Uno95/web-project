@@ -2,90 +2,90 @@
 
 {% block scriptAPI %}
 
-            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script src="/foundation-5.5.3/js/add_addrees.js"></script>
 {% endblock %}
 
 {% block title %}Mendaftar Usaha{% endblock %}
 
 {% block content %}
-  <div class="row atas1">
-      <div class="large-6 columns">
-      <div class="signup-panel">
-        <p class="welcome"> Daftarkan Usaha Anda!</p>
-        <form action="newuser" method="post">
-          <div class="row collapse">
-            <div class="small-2  columns">
-              <span class="prefix"><i class="mdi mdi-home-modern"></i></span>
-            </div>
-            <div class="small-10  columns">
-              <input type="text" name="companyname" placeholder="Nama Perusahaan Anda">
-            </div>
+<div class="row atas1">
+  <div class="large-6 columns">
+    <div class="signup-panel">
+      <p class="welcome"> Daftarkan Usaha Anda!</p>
+      <form action="newuser" method="post">
+        <div class="row collapse">
+          <div class="small-2  columns">
+            <span class="prefix"><i class="mdi mdi-home-modern"></i></span>
           </div>
-          <div class="row collapse">
-            <div class="small-2 columns ">
-              <span class="prefix"><i class="mdi mdi-map-marker"></i></span>
-            </div>
-            <div class="small-10 columns ">
-              <input id="address" disabled  type="text"/>
+          <div class="small-10  columns">
+            <input type="text" name="companyname" placeholder="Nama Perusahaan Anda">
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-2 columns ">
+            <span class="prefix"><i class="mdi mdi-map-marker"></i></span>
+          </div>
+          <div class="small-10 columns ">
+            <input id="address" disabled  type="text"/>
             <input type="hidden" name="lat" id="latitude" placeholder="Latitude"/>
             <input type="hidden" name="lng" id="longitude" placeholder="Longitude"/>
             <input type="hidden"  name="param" value="newadmin"/>
-            </div>
           </div>
-          <div class="row collapse">
-            <div class="small-2 columns ">
-              <span class="prefix"><i class="mdi mdi-account"></i></span>
-            </div>
-            <div class="small-10 columns ">
-              <input type="text" name="adminname" placeholder="Nama Pemilik Perusahaan">
-            </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-2 columns ">
+            <span class="prefix"><i class="mdi mdi-account"></i></span>
           </div>
-          <div class="row collapse">
-            <div class="small-2 columns ">
-              <span class="prefix"><i class="mdi mdi-email"></i></span>
-            </div>
-            <div class="small-10 columns ">
-              <input type="text" name="email" placeholder="Email">
-            </div>
+          <div class="small-10 columns ">
+            <input type="text" name="adminname" placeholder="Nama Pemilik Perusahaan">
           </div>
-          <div class="row collapse">
-            <div class="small-2 columns ">
-              <span class="prefix"><i class="mdi mdi-lock"></i></span>
-            </div>
-            <div class="small-10 columns ">
-              <input type="text" name="password" placeholder="Password">
-            </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-2 columns ">
+            <span class="prefix"><i class="mdi mdi-email"></i></span>
           </div>
-          <div class="row collapse">
-            <div class="small-2 columns ">
-              <span class="prefix"><i class="mdi mdi-cellphone-android"></i></span>
-            </div>
-            <div class="small-10 columns ">
-              <input type="text" name="nomorhp" placeholder="Nomor Handphone">
-            </div>
+          <div class="small-10 columns ">
+            <input type="text" name="email" placeholder="Email">
           </div>
-          <div class="row collapse">
-            <div class="small-2 columns ">
-              <span class="prefix"><i class="mdi mdi-information-outline"></i></span>
-            </div>
-            <div class="small-10 columns ">
-                <textarea placeholder="Kerangan" name="keterangan"></textarea>
-            </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-2 columns ">
+            <span class="prefix"><i class="mdi mdi-lock"></i></span>
           </div>
-          <input type="submit" class="button expand" value="Daftar" />
-        </form>
-      </div>
+          <div class="small-10 columns ">
+            <input type="text" name="password" placeholder="Password">
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-2 columns ">
+            <span class="prefix"><i class="mdi mdi-cellphone-android"></i></span>
+          </div>
+          <div class="small-10 columns ">
+            <input type="text" name="nomorhp" placeholder="Nomor Handphone">
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-2 columns ">
+            <span class="prefix"><i class="mdi mdi-information-outline"></i></span>
+          </div>
+          <div class="small-10 columns ">
+            <textarea placeholder="Kerangan" name="keterangan"></textarea>
+          </div>
+        </div>
+        <input type="submit" class="button expand" value="Daftar" />
+      </form>
     </div>
-    <div class="large-6 columns">
-      <p>Pilih lokasi Anda!</p>
-      <div id="myMap"></div><br/>
+  </div>
+  <div class="large-6 columns">
+    <p>Pilih lokasi Anda!</p>
+    <div id="myMap"></div><br/>
 
-    </div>
+  </div>
     <!--<div class="large-3 columns">
       <p></p>
     </div>-->
-   </div>
+  </div>
 
 
 </form>

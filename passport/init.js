@@ -90,19 +90,29 @@ module.exports = function(passport) {
                         var param            = req.body.param;
                         // create the user
                         if(param=="newadmin"){
-                          var newUser            = new UserAdmin();
+                            var newUser            = new UserAdmin();
+                            newUser.local.email    = email;
+                            newUser.local.password = newUser.generateHash(password);
+                            newUser.local.companyname = req.body.companyname;
+                            newUser.local.adminname = req.body.adminname;
+                            newUser.local.address  = req.body.address;
+                            newUser.local.nomorhp    = req.body.nomorhp;
+                            newUser.local.keterangan   = req.body.keterangan;
+                            newUser.local.lat   = req.body.lat;
+                            newUser.local.lng   = req.body.lng;
                         }
                         else {
-                          var newUser            = new User();
+                            var newUser            = new User();
+                            newUser.local.email    = email;
+                            newUser.local.password = newUser.generateHash(password);
+                            newUser.local.username = req.body.username;
+                            newUser.local.fullname = req.body.fullname;
+                            newUser.local.address  = req.body.address;
+                            newUser.local.phone    = req.body.phone;
+                            newUser.local.repass   = req.body.repass;
                         }
 
-                        newUser.local.email    = email;
-                        newUser.local.password = newUser.generateHash(password);
-                        newUser.local.username = req.body.username;
-                        newUser.local.fullname = req.body.fullname;
-                        newUser.local.address  = req.body.address;
-                        newUser.local.phone    = req.body.phone;
-                        newUser.local.repass   = req.body.repass;
+                        
 
                         newUser.save(function(err) {
                             if (err)
