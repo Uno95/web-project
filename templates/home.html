@@ -5,19 +5,19 @@
 {% block cover %}
 <ul class="example-orbit" data-orbit>
 	<li>
-		<img src="http://placehold.it/2000x750" alt="slide 1" />
+		<div style="background: url(http://placehold.it/2000x750);" id="imgcap"></div>
 		<div class="orbit-caption">
 			Caption One.
 		</div>
 	</li>
 	<li class="active">
-		<img src="http://placehold.it/2000x750" alt="slide 2" />
+		<div style="background: url(http://placehold.it/2000x750);" id="imgcap"></div>
 		<div class="orbit-caption">
 			Caption Two.
 		</div>
 	</li>
 	<li>
-		<img src="http://placehold.it/2000x750" alt="slide 3" />
+		<div style="background: url(http://placehold.it/2000x750);" id="imgcap"></div>
 		<div class="orbit-caption">
 			Caption Three.
 		</div>
@@ -34,19 +34,26 @@
 			<hr>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row content">
 		<div class="large-4 columns card">
 			<a href="#" class="th">
-				<img src="http://placehold.it/2000x750" alt="" class="thumbnail">		
+				<div style="background: url(http://placehold.it/2000x750);" id="imgcap2" class="thumbnail"></div>		
 			</a>
 			<h5>Note that we have set the box-sizing property to border-box. This makes sure that the padding and eventually borders are included in the total width and height of the elements.</h5>
-			<p class="left">Rp.55.000,00</p><a href="#"><img src="/MM_QRcode.png" alt="" class="imgqr"></a>
+			<p class="left">Rp.55.000,00</p><a href="#" data-reveal-id="myModal"><img src="/MM_QRcode.png" alt="" class="imgqr"></a>
+			<div id="myModal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+				<h2 id="modalTitle">Scan this QrCode!</h2>
+				<div class="row large-12 imgqr" id="imgqr"><img src="/MM_QRcode.png" alt=""></div>
+				<p>Nama Menu 	:</p>
+				<p>Harga Menu 	:</p>
+				<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+			</div>
 			<a href="#" class="button expand">Buy</a>
 
 		</div>
 		<div class="large-4 columns card">
 			<a href="#" class="th">
-				<img src="http://placehold.it/2000x750" alt="" class="thumbnail">		
+				<div style="background: url(http://placehold.it/2000x750);" id="imgcap2" class="thumbnail"></div>		
 			</a>
 			<h5>Note that we have set the box-sizing property to border-box. This makes sure that the padding and eventually borders are included in the total width and height of the elements.</h5>
 			<p class="left">Rp.55.000,00</p> <a href="#"><img src="/MM_QRcode.png" alt="" class="imgqr"></a>
@@ -54,7 +61,7 @@
 		</div>
 		<div class="large-4 columns card">
 			<a href="#" class="th">
-				<img src="http://placehold.it/2000x750" alt="" class="thumbnail">		
+				<div style="background: url(http://placehold.it/2000x750);" id="imgcap2" class="thumbnail"></div>	
 			</a>
 			<h5>Note that we have set the box-sizing property to border-box. This makes sure that the padding and eventually borders are included in the total width and height of the elements.</h5>
 			<p class="left">Rp.55.000,00</p><a href="#"><img src="/MM_QRcode.png" alt="" class="imgqr"></a>
@@ -80,7 +87,7 @@
 	<div class="row">
 		<div class="large-4 columns card">
 			<a href="#" class="th">
-				<img src="http://placehold.it/2000x750" alt="" class="thumbnail">		
+				<div style="background: url(http://placehold.it/2000x750);" id="imgcap2" class="thumbnail"></div>		
 			</a>
 			<div class="row">
 			<div class="columns">
@@ -89,13 +96,12 @@
 			</div>
 			</div>
 			<p>Jl.DoctorMansur , Medan</p>
-			<p class="left">Rp.55.000,00</p>
-			<a href="#" class="button expand">Buy</a>
+			<a href="#" class="button expand">Kunjungi</a>
 
 		</div>
 		<div class="large-4 columns card">
 			<a href="#" class="th">
-				<img src="http://placehold.it/2000x750" alt="" class="thumbnail">		
+				<div style="background: url(http://placehold.it/2000x750);" id="imgcap2" class="thumbnail"></div>		
 			</a>
 			<div class="row">
 			<div class="columns">
@@ -104,12 +110,11 @@
 			</div>
 			</div>
 			<p>Jl.DoctorMansur , Medan</p>
-			<p class="left">Rp.55.000,00</p>
-			<a href="#" class="button expand">Buy</a>
+			<a href="#" class="button expand">Kunjungi</a>
 		</div>
 		<div class="large-4 columns card">
 			<a href="#" class="th">
-				<img src="http://placehold.it/2000x750" alt="" class="thumbnail">		
+				<div style="background: url(http://placehold.it/2000x750);" id="imgcap2" class="thumbnail"></div>	
 			</a>
 			<div class="row">
 			<div class="columns">
@@ -118,8 +123,7 @@
 			</div>
 			</div>
 			<p>Jl.DoctorMansur , Medan</p>
-			<p class="left">Rp.55.000,00</p>
-			<a href="#" class="button expand">Buy</a>
+			<a href="#" class="button expand">Kunjungi</a>
 		</div>
 		
 	</div>
