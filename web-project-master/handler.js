@@ -1,5 +1,18 @@
 var handler, props;
 
+comment = function(req, res){
+	res.render('comment.html');
+};
+ubahPassword = function(req, res){
+	res.render('ubahPassword.html');
+};
+ubahProfil = function(req, res){
+	res.render('ubahProfil.html');
+};
+profil = function(req, res){
+	res.render('profil.html');
+};
+
 home = function(req, res){
 	res.render('home.html');
 };
@@ -45,6 +58,10 @@ placeDetail = function(req, res) {
 };
 
 handler = {
+	comment: comment,
+	ubahPassword: ubahPassword,
+	ubahProfil: ubahProfil,
+	profil: profil,
 	home: home,
 	admin: admin,
 	form: form,

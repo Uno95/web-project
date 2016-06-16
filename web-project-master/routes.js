@@ -5,6 +5,10 @@ var express = require('express'),
 
 router = function(app){
 	r.get('/', h.home);
+	r.get('/comment',h.comment);
+	r.get('/ubahProfil',h.ubahProfil);
+	r.get('/ubahPassword',h.ubahPassword);
+	r.get('/profil',h.profil)
 	r.get('/admin', h.admin);
 	r.get('/form', h.form);
 	r.get('/formsign', h.formsign);
