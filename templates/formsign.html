@@ -1,0 +1,88 @@
+{% extends "index.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+<div class="row atas1">
+  <div class="large-3 columns">
+    <p></p>
+  </div>
+  <div class="large-6 columns">
+    <div class="signup-panel">
+      <p class="welcome signup">Sign Up with <a href="#">Facebook</a> or <a href="#">Google</a></p>
+      <div class="row">
+        <div class="large-5 columns"><hr></div>
+        <div class="large-2 columns or">or</div>
+        <div class="large-5 columns"><hr></div>
+      </div>
+      <form action="newuser" method="post">
+        <div class="row collapse">
+          <div class="small-2  columns">
+            <span class="prefix"><i class="mdi mdi-account"></i></span>
+          </div>
+          <div class="small-10  columns">
+            <input type="text" name="fullname" placeholder="Nama Lengkap Anda">
+            <input type="hidden"  name="param" value="newuser"/>
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-2  columns">
+            <span class="prefix"><i class="mdi mdi-map-marker"></i></span>
+          </div>
+          <div class="small-10  columns">
+            <input type="text" name="address" placeholder="Alamat Lengkap Anda">
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-2 columns ">
+            <span class="prefix"><i class="mdi mdi-cellphone-android"></i></span>
+          </div>
+          <div class="small-10 columns ">
+            <input type="text" name="phone" placeholder="Nomor Telepon Anda">
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-2 columns ">
+            <span class="prefix"><i class="mdi mdi-email"></i></span>
+          </div>
+          <div class="small-10 columns ">
+            <input type="text" name="email" placeholder="Email Anda">
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-2 columns ">
+            <span class="prefix"><i class="mdi mdi-account"></i></span>
+          </div>
+          <div class="small-10 columns ">
+            <input type="text" name="username" placeholder="Username Anda">
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-2 columns ">
+            <span class="prefix"><i class="mdi mdi-lock"></i></span>
+          </div>
+          <div class="small-10 columns ">
+            <input type="password" name="password" placeholder="Password">
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-2 columns ">
+            <span class="prefix"><i class="mdi mdi-lock"></i></span>
+          </div>
+          <div class="small-10 columns ">
+            <input type="password" name="repass" placeholder="Konfirmasi Password">
+          </div>
+        </div>
+      <input type="submit" class="button expand" value="Daftar" />
+      </form>
+    </div>
+  </div>
+
+
+  <div class="large-3 columns">
+    <p></p>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+Jika saya adalah seorang foodTraveller, saya ingin mengetahui makanan/minuman yang belum pernah saya cicipi, yang paling diminati dan apa promo menarik di suatu tempat dengan mudah. Sehingga, saya dapat menghemat waktu dan segera menikmati makanan saya.
+(yang dapat diterapkan: lokasi, jam buka, daftar menu, comments/rattings, kupon promo)
+
+Jika saya adalah seseorang yang hobby hangout, saya ingin mencari sebuah cafe/restoran yang ada wifi, nyaman dan makan/minum nya cukup murah. Sehingga, saya dapat hangout/mengerjakan tugas dengan nyaman.
+(yang dapat diterapkan: lokasi, fasilitas, foto cafe/restoran, daftar menu, jam buka)
+
+Jika saya adalah pecinta yang manis2(Donat, Cake, IceCream, dll), saya ingin makan/beli di sebuah tempat dimana saya dapat menikmati makanan tersebut dengan harga yang murah dalam satu paket. Sehingga, saya tidak perlu mengeluarkan biaya lebih untuk membelinya secara terpisah.
+(yang dapat diterapkan: lokasi, kategori makanan/minuman, daftar menu, kupon promo)
+
+
+Fitur-fitur
+====================================================================================================
+Tampilkan Peta Lokasi
+Tampilkan detail Cafe/Restoran(Jam Buka, fasilitas, dll)
+Tampilkan Kupon promo dari setiap Cafe/Restoran & makanan/minuman kedalam bentuk QR code.
+Tampilkan daftar menu dan harga dari setiap Cafe/Restoran.
+Tampilkan comments/rattings makanan/minuman di setiap Cafe/Restoran.
+Pencarian Cafe/Restoran berdasarkan lokasi.
+mengikuti update dari Cafe/Restoran
+Pemberitahuan menu baru makanan/minuman Cafe/Restoran yang diikuti(follow).
+Pemberitahuan kupon promo makanan/minuman Cafe/Restoran yang diikuti(follow).
+pengguna dapat mendaftar & login
+(Urutkan berdasarkan paling banyak comment/ paling sering dilihat/ ratting tertinggi/ terlaris)
+Pemberitahuan user yang sedang makan disuatu tempat berdasarkan user yang telah di folow

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="/foundation-5.5.3/css/foundation.min.css">
+	<link rel="stylesheet" type="text/css" href="/foundation-5.5.3/css/customcss.css">
+	<link href="/foundation-5.5.3/fonts/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+	<script src="/foundation-5.5.3/js/jquery-2.2.3.min.js"></script>
+</head>
+<body>
+	<div class="main-wrapper">
+		<header>
+			{% include "nav.html" %}
+		</header>
+		<div class="cover">
+			{% block cover %}
+			{% endblock %}
+		</div>
+		<section>
+			{% block content %}
+			{% endblock %}
+		</section>
+		<footer>
+			{% include "footer.html" %}
+		</footer>
+	</div>
+
+
+    <script src="/foundation-5.5.3/js/foundation.min.js"></script>
+    	<script>
+    		$(document).foundation();
+    	</script>
+
+	<script src="/foundation-5.5.3/js/foundation.min.js"></script>
+	<script src="/foundation-5.5.3/js/custom.js"></script>
+	{% block scriptAPI %}
+	{% endblock %}
+	<script>
+		$(document).foundation();
+	</script>
+</body>
+</html>
