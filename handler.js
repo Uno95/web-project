@@ -1,6 +1,26 @@
 var handler, props;
 
 //show landing page
+ubahPassword = function(req, res){
+	res.render('ubahPassword.html');
+};
+
+ubahProfil = function(req, res){
+	res.render('ubahProfil.html');
+};
+
+profil = function(req, res){
+	res.render('profil.html');
+};
+
+comment = function(req, res){
+	res.render('comment.html');
+};
+
+admin = function(req, res){
+	res.render('admin.html');
+};
+
 home = function(req, res){
 	res.render('home.html');
 };
@@ -53,6 +73,7 @@ placeDetail = function(req, res) {
 };
 
 handler = {
+	admin: admin,
 	home: home,
 	form: form,
 	placeDetail: placeDetail,
