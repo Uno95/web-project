@@ -228,3 +228,92 @@ html, body {
 		   height: 435px;
 		   width: 100%;
 		}
+
+.container {
+  margin: 0 auto;
+  width: 680px;
+}
+
+.profil {
+  width: 300px;
+  margin-left: 15px;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 200px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.btn1 {
+  width: 200px;
+  margin-right: 16px;
+}
+
+a input#btn[type=button]{
+  color:#000;
+}
+footer {
+  clear:both;
+}
+
+#btn {
+  width: 126px;
+  height: 52px;
+  margin-right: 16px;
+}
+
+.btn3 {
+  width: 250px;
+  margin-left: 16px;
+}
+
+.btn7 {
+  width: 250px;
+  
+}
+.picture {
+  margin-left: 16px;
+}
+
+.btn5 {
+
+    width: 150px;
+    height: 30px;
+  }
+
+  .ct {
+    padding-top: 50px;
+    margin-left: 20%;
+  }
+
+  .cr {
+    padding-top: 50px;
+    width: 750px;
+    margin: 0 auto;
+   
+  }
+
+
+ .leftSide {
+  float: left;
+  margin-left: 20px;
+ }
+
+ .fix {
+  clear: both;
+  margin-top: 20px;
+  padding-top: 20px;
+ }
+
+ .btn6 {
+  width: 235px;
+  margin-right: 10px;
+}
+
+#page-wrapper {
+  height: 700px;
+}
+input#inp[type=text],input#inp[type=password] {
+  width: 380px;
+}
