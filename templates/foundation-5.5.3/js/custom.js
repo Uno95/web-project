@@ -1,4 +1,3 @@
-
 var address;
 var addressVal = lt = lg  = "";
 
@@ -8,6 +7,6 @@ $(document).ready(function(){
 		addressVal = addressSelected.text();
 		var where = addressVal;
 		console.log(where);
-		window.location.assign("http://localhost:3000/hasilpencarian/" + addressVal);
+		window.location.assign("hasilpencarian/" + addressVal);
 	});
 });
