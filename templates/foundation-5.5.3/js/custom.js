@@ -7,6 +7,6 @@ $(document).ready(function(){
 		addressVal = addressSelected.text();
 		var where = addressVal;
 		console.log(where);
-		window.location.assign("hasilpencarian/" + addressVal);
+		window.location.assign("./hasilpencarian/" + addressVal);
 	});
 });
