@@ -7,7 +7,7 @@ var qr 			= require('qr-image'),
 	passport 	= require('passport'),
 	flash 		= require('connect-flash'),
 	
-	dbConfig 		= require('./db.js'),
+	dbConfig 		= require('db.js'),
 	morgan       	= require('morgan'),
 	cookieParser 	= require('cookie-parser'),
 	bodyParser   	= require('body-parser'),
