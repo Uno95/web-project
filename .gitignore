@@ -1,9 +1,6 @@
-
-
 npm-debug.log
 node_modules
 
 db.js
-routes.js
 models/user.js
 models/useradmin.js
