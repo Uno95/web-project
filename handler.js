@@ -1,6 +1,10 @@
 var handler, props;
 
 //show landing page
+mainProfil = function(req, res){
+	res.render('mainProfil.html');
+};
+
 ubahPassword = function(req, res){
 	res.render('ubahPassword.html');
 };
@@ -73,6 +77,7 @@ placeDetail = function(req, res) {
 };
 
 handler = {
+	mainProfil: mainProfil,
 	ubahPassword: ubahPassword,
 	ubahProfil: ubahProfil,
 	profil: profil,

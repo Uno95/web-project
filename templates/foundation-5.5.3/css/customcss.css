@@ -317,3 +317,78 @@ footer {
 input#inp[type=text],input#inp[type=password] {
   width: 380px;
 }
+
+.wrap {
+  background: #fff;
+}
+
+#user {
+  width: 100%;
+  height: 200px;
+  background: #656762;
+}
+
+.uPage{
+  background: url("admin/images/bp.png");
+  width: 100%;
+  height: 200px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.pain {
+  margin-top: -135px;
+  background: #fff;
+  box-shadow: 2px 2px 7px #ccc;
+
+}
+
+.navUser {
+  width: 100%;
+  height: 150px;
+}
+
+.uLeft {
+  float: left;
+  width: 550px;
+  
+}
+.uImg {
+  width: 100px;
+  height: 70px;
+  margin: 10px;
+  float:left;
+
+}
+
+.uName {
+  float:left;
+  margin-left: 10px;
+}
+
+
+p.name {
+  font-size: 2.5em;
+  margin-bottom: -15px;
+}
+
+p.email {
+  font-size:1.5em;
+}
+
+.edit {
+  float: right;
+  margin-top: 15px;
+}
+
+.uRight {
+  float: right;
+  margin-top: 15px;
+  margin-right: 50px;
+}
+
+.follow {
+  margin-left: 2px;
+}
