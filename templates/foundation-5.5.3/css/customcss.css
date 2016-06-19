@@ -376,6 +376,7 @@ p.name {
 
 p.email {
   font-size:1.5em;
+  font-style: italic;
 }
 
 .edit {
@@ -391,4 +392,9 @@ p.email {
 
 .follow {
   margin-left: 2px;
+}
+
+.foo {
+  text-align: center;
+  bottom: 15;
 }

@@ -5,6 +5,12 @@ var express = require('express'),
 
 router = function(app, passport){
 	r.get('/', h.home);
+	r.get('/admin', h.admin);
+	r.get('/profil', h.profil);
+	r.get('/comment', h.comment);
+	r.get('/ubahProfil', h.ubahProfil);
+	r.get('/ubahPassword', h.ubahPassword);
+	r.get('/mainProfil', h.mainProfil);
 	r.get('/form', h.form);
 	r.get('/formsign', h.formsign);
 	r.get('/login', h.login);
