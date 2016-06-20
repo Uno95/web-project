@@ -13,6 +13,7 @@
   "author": "w3b5",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.0.0-rc.6",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.1",
     "connect-flash": "^0.1.1",

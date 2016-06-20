@@ -1,6 +1,8 @@
-var handler, props;
-var items = []; 
+
 var	Kupon = require('../models/kupon');
+var	Menu = require('../models/menu');
+var handler, props, i;
+var items = [], items2 = []; 
 
 
 //show landing page
@@ -8,19 +10,25 @@ home = function(req, res){
 	Kupon.find({}, function(err, kupon) {
 		if (err) {throw err};
 		//console.log(kupon);
-		res.render('./user/home.html', {
-			data:kupon
-		});
+		for (i = 0; i<kupon.length; i++){
+			items.push(kupon[i]);
+		}
 	});
 
-	
-	// Kupon.each(function(err, doc) {
-	// if (doc != null) {
-	// 		console.log(doc);
-	// 	}else{
-	// 		callback();
-	// 	}
-	// })
+	Menu.find({}, function(err, menu) {
+		if (err) {throw err};
+		//console.log(kupon);
+		for (i = 0; i<menu.length; i++){
+			items2.push(menu[i]);
+		}
+	});
+
+	//console.log(items2);
+
+	res.render('./user/home.html', {
+		dataKupon: items,
+		dataCafe: items2
+	});
 };
 
 //show form sign up for company
