@@ -5,10 +5,12 @@ var express = require('express'),
 
 router = function(app, passport){
 	r.get('/admin', h.admin);
-	r.get('/comment', h.comment);
-	r.get('/profil', h.profil);
-	r.get('/ubahProfil', h.ubahProfil);
-	r.get('/ubahPassword', h.ubahPassword);
+	r.get('/admin/comment', h.comment);
+	r.get('/admin/profil', h.profil);
+	r.get('/admin/ubahProfil', h.ubahProfil);
+	r.get('/admin/ubahPassword', h.ubahPassword);
+	r.get('/admin/add-coupon', h.addCoupon);
+	r.post('/admin/adding-coupon', h.addingCoupon);
 
 	app.use(r);
 };
