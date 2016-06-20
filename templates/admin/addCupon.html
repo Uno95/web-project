@@ -1,0 +1,59 @@
+{% extends "adminbase.html" %}
+
+{% block title %}Tambah | Admin Panel{% endblock %}
+{% block content %}
+<div id="page-wrapper">
+  <div class="cr">
+    <form method="post" action="adding-coupon">
+      <div class="row">
+        <h3>Tambah Kupon</h3>
+      </div>
+      <div class="row>">
+        <div class="leftSide">
+          <div class="row">
+              <div class="large-12 columns">
+                <label>Nama Menu
+                  <input type="text" name="nameCoupon"
+                    placeholder="Masukkan Nama Menu" id="inp"/>
+                </label>
+              </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Harga
+                <input type="text" name="price"
+                  placeholder="Masukkan Harga Kupon" id="inp"/>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Kadaluarsa
+                <input type="date" name="exp" id="inp"/>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Persyaratan (opsional)
+                <textarea name="cond"></textarea>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="picture">
+              <label>Persyaratan (opsional)
+                <input type="file" name="cuponsImg">
+              </label>
+            </div>
+          </div>
+          <input type="hidden" name="cafeName" value="noname">
+          <input type="hidden" name="couponLink" value="testLinkEncoded">
+          <input type="submit" class="button" value="Tambahkan">
+          <a href="profil" class="button secondary">Batal</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
