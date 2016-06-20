@@ -1,10 +1,16 @@
 var express = require('express'),
 	r = express.Router(),
-	h = require('./handler'),
+	h = require('../handler').user,
 	router;
 
 router = function(app, passport){
 	r.get('/', h.home);
+	r.get('/userpage/:name', isLoggedin, h.userpage);
+	r.get('/admin', h.admin);
+	r.get('/comment', h.comment);
+	r.get('/profil', h.profil);
+	r.get('/ubahProfil', h.ubahProfil);
+	r.get('/ubahPassword', h.ubahPassword);
 	r.get('/form', h.form);
 	r.get('/formsign', h.formsign);
 	r.get('/login', h.login);
@@ -24,10 +30,10 @@ router = function(app, passport){
 	    failureRedirect : '/login', // redirect back to the signup page if there is an error
 	    failureFlash : true // allow flash messages
 	}));
-
 	app.use(r);
 };
 module.exports = router;
+
 
 function isLoggedin(req,res,next){
 	if(req.isAuthenticated())

@@ -1,4 +1,4 @@
-var router = require('./routes'),
+var router = require('./router'),
 	nunjucks = require('nunjucks'),
 	middleware;
 

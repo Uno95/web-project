@@ -1,58 +1,55 @@
 var handler, props;
 
 //show landing page
-mainProfil = function(req, res){
-	res.render('mainProfil.html');
-};
 
 ubahPassword = function(req, res){
-	res.render('ubahPassword.html');
+	res.render('./user/ubahPassword.html');
 };
 
 ubahProfil = function(req, res){
-	res.render('ubahProfil.html');
+	res.render('./user/ubahProfil.html');
 };
 
 profil = function(req, res){
-	res.render('profil.html');
+	res.render('./user/profil.html');
 };
 
 comment = function(req, res){
-	res.render('comment.html');
+	res.render('./user/comment.html');
 };
 
 admin = function(req, res){
-	res.render('admin.html');
+	res.render('./user/admin.html');
 };
 
 home = function(req, res){
-	res.render('home.html');
+	res.render('./user/home.html');
 };
 
 //show form sign up for company
 form = function(req, res){
-	res.render('form.html');
+	res.render('./user/form.html');
 };
 
 //show form sign up for user
 formsign = function(req, res){
-	res.render('formsign.html');
+	res.render('./user/formsign.html');
 };
 
 
 //show form sign in for user
 login = function(req, res){
-	res.render('login.html');
+	res.render('./user/login.html');
 };
 
 //registers success
 berhasilregister = function(req, res){
-	res.render('registerberhasil.html');
+	res.render('./user/registerberhasil.html');
 };
 
 //show search result page
 hasilpencarian = function(req, res) {
-	res.render('hasilpencarian.html',
+	res.render('./user/hasilpencarian.html',
 		{
 			name: req.params.name
 		}
@@ -60,7 +57,7 @@ hasilpencarian = function(req, res) {
 };
 
 userpage = function (req, res) {
-	res.render('userpage.html',
+	res.render('./user/mainProfil.html',
 		{
 			name: req.params.username
 		}
@@ -68,7 +65,7 @@ userpage = function (req, res) {
 };
 
 placeDetail = function(req, res) {
-	res.render('placeDetail.html',
+	res.render('./user/placeDetail.html',
 		{
 			name: req.params.name,
 			id: req.params.id
@@ -77,7 +74,6 @@ placeDetail = function(req, res) {
 };
 
 handler = {
-	mainProfil: mainProfil,
 	ubahPassword: ubahPassword,
 	ubahProfil: ubahProfil,
 	profil: profil,
