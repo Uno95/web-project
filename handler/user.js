@@ -74,11 +74,6 @@ placeDetail = function(req, res) {
 };
 
 handler = {
-	ubahPassword: ubahPassword,
-	ubahProfil: ubahProfil,
-	profil: profil,
-	comment:comment,
-	admin: admin,
 	home: home,
 	form: form,
 	placeDetail: placeDetail,
