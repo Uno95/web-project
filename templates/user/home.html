@@ -35,38 +35,29 @@
 		</div>
 	</div>
 	<div class="row content">
+		{% for item in data %}
 		<div class="large-4 columns card">
 			<a href="#" class="th">
 				<div style="background: url(http://placehold.it/2000x750);" id="imgcap2" class="thumbnail"></div>		
 			</a>
-			<h5>Note that we have set the box-sizing property to border-box. This makes sure that the padding and eventually borders are included in the total width and height of the elements.</h5>
-			<p class="left">Rp.55.000,00</p><a href="#" data-reveal-id="myModal"><img src="/MM_QRcode.png" alt="" class="imgqr"></a>
-			<div id="myModal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+			<h5>{{ item.local.namaMenu }}</h5>
+			<p class="left">{{ item.local.hargaMenu }}</p>
+			<a href="#" data-reveal-id="myModal{{ loop.index }}"><img src="/MM_QRcode.png" alt="" class="imgqr"></a>
+			<div id="myModal{{ loop.index }}" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 				<h2 id="modalTitle">Scan this QrCode!</h2>
 				<div class="row large-12 imgqr" id="imgqr"><img src="/MM_QRcode.png" alt=""></div>
-				<p>Nama Menu 	:</p>
-				<p>Harga Menu 	:</p>
+				<p>Nama Menu 	: {{ item.local.namaMenu }}</p>
+				<p>Harga Menu 	: {{ item.local.hargaMenu }}</p>
 				<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 			</div>
 			<a href="#" class="button expand">Buy</a>
-
 		</div>
+		{% else %}
 		<div class="large-4 columns card">
-			<a href="#" class="th">
-				<div style="background: url(http://placehold.it/2000x750);" id="imgcap2" class="thumbnail"></div>		
-			</a>
-			<h5>Note that we have set the box-sizing property to border-box. This makes sure that the padding and eventually borders are included in the total width and height of the elements.</h5>
-			<p class="left">Rp.55.000,00</p> <a href="#"><img src="/MM_QRcode.png" alt="" class="imgqr"></a>
-			<a href="#" class="button expand">Buy</a>
+			<h3>Nothing to Display</h3>
 		</div>
-		<div class="large-4 columns card">
-			<a href="#" class="th">
-				<div style="background: url(http://placehold.it/2000x750);" id="imgcap2" class="thumbnail"></div>	
-			</a>
-			<h5>Note that we have set the box-sizing property to border-box. This makes sure that the padding and eventually borders are included in the total width and height of the elements.</h5>
-			<p class="left">Rp.55.000,00</p><a href="#"><img src="/MM_QRcode.png" alt="" class="imgqr"></a>
-			<a href="#" class="button expand">Buy</a>
-		</div>
+		{% endfor %}
+		<div class="large-4 columns card"></div>
 		
 	</div>
 	<div class="row">

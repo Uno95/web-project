@@ -1,8 +1,26 @@
 var handler, props;
+var items = []; 
+var	Kupon = require('../models/kupon');
+
 
 //show landing page
 home = function(req, res){
-	res.render('./user/home.html');
+	Kupon.find({}, function(err, kupon) {
+		if (err) {throw err};
+		//console.log(kupon);
+		res.render('./user/home.html', {
+			data:kupon
+		});
+	});
+
+	
+	// Kupon.each(function(err, doc) {
+	// if (doc != null) {
+	// 		console.log(doc);
+	// 	}else{
+	// 		callback();
+	// 	}
+	// })
 };
 
 //show form sign up for company
