@@ -1,0 +1,52 @@
+{% extends "adminbase.html" %}
+
+{% block title %}Ubah Profil | Admin Panel{% endblock %}
+{% block content %}
+<div id="page-wrapper">
+  <div class="cr">
+    <form>
+      <div class="row">
+        <div role="button" href="#" class="button profil">Edit Profil
+        </div>
+      </div>
+      <div class="row>">
+        <div class="left">
+          <img src="../admin/images/example5.jpg">
+        </div>
+        <div class="leftSide">
+          <div class="row">
+              <div class="large-12 columns">
+                <label>Email
+                  <input type="text" placeholder="Masukkan Email Baru Anda" id="inp"/>
+                </label>
+              </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Nama Panggilan
+                <input type="text" placeholder="Masukkan Nama Baru Anda"  id="inp"/>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Pekerjaan
+                <input type="text" placeholder="Masukkan Pekerjaan Baru Anda" id="inp"/>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="picture">
+              <label>Foto Profil
+                <input type="file"/>
+              </label>
+            </div>
+          </div>
+          <div role="button" href="#" class="button btn7">Simpan Perubahan</div>
+          <a href="profil"><input type="button" value="Batal" id="btn"></a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

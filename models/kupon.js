@@ -1,0 +1,19 @@
+// load the things we need
+var mongoose = require('mongoose');
+
+// define the schema for our user model
+var userSchema = mongoose.Schema({
+
+    local: {
+        namaMenu      : String,
+        hargaMenu     : String,
+        kadaluarsa    : String,
+        gambar        : String,
+        persyaratan   : String,
+        namaCafe      : String,
+        couponLink    : String,
+    }
+});
+
+// create the model for users and expose it to our app
+module.exports = mongoose.model('Kupon', userSchema);

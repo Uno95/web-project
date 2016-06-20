@@ -1,0 +1,40 @@
+{% extends "adminbase.html" %}
+
+{% block title %}Profil | Admin Panel{% endblock %}
+{% block content %}
+<div id="page-wrapper">
+  <div class="cr">
+    <form>
+      <div class="row">
+        <div role="button" href="#" class="button profil">Profil
+        </div>
+      </div>
+      <div class="row>">
+        <div class="left">
+          <img src="../admin/images/example5.jpg">
+        </div>
+
+        <div class="leftSide">
+      
+            <h3>PT.INDOFOOD JAYA</h3>
+            <h3>Alamat</h3>
+              <dd>Jalan Simangungsong</dd>
+            <h3>Deskripsi</h3>
+              <dd>Lorem Ipsum Dolor sit Amet</dd>
+            <h3>Email</h3>
+              <dd> contoh@example.com</dd> 
+          
+        </div>
+      </div>
+    </form>
+    <div class="fix">
+    
+        <input type="file" id="pic" name="pic" style="display:none" onchange="document.getElementById('filename').value=this.value">
+        <input type="button"class="button btn6"value="Ubah Foto Profil" onclick="document.getElementById('pic').click()">
+        
+        <a href="ubahPassword"><div role="button" href="ubahProfil.html" tabindex="0" class="button btn6">Ubah Password</div></a>
+        <a href="ubahProfil"><div role="button" href="ubahProfil.html" tabindex="0" class="button btn6">Edit Profil</div></a>
+    </div>
+  </div>
+</div>
+{% endblock %}

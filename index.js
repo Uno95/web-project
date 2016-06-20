@@ -37,7 +37,7 @@ app.use(flash());
 
 middleware(app, passport);
 
-app.use('/', express.static(__dirname + '/templates'));
+app.use('/', express.static(__dirname + '/public'));
 app.use('/', express.static(__dirname + '/imgres'));
 app.set('port', process.env.PORT || 3000);
 app.listen(app.get('port'), function(){

@@ -1,26 +1,34 @@
 var handler, props;
 
-// var props = {
-// 	name : req.params.name
-// }
-
+//show landing page
 home = function(req, res){
-	res.render('home.html');
+	res.render('./user/home.html');
 };
+
+//show form sign up for company
 form = function(req, res){
-	res.render('form.html');
+	res.render('./user/form.html');
 };
+
+//show form sign up for user
 formsign = function(req, res){
-	res.render('formsign.html');
+	res.render('./user/formsign.html');
 };
+
+
+//show form sign in for user
 login = function(req, res){
-	res.render('login.html');
+	res.render('./user/login.html');
 };
+
+//registers success
 berhasilregister = function(req, res){
-	res.render('registerberhasil.html');
+	res.render('./user/registerberhasil.html');
 };
+
+//show search result page
 hasilpencarian = function(req, res) {
-	res.render('hasilpencarian.html',
+	res.render('./user/hasilpencarian.html',
 		{
 			name: req.params.name
 		}
@@ -28,7 +36,7 @@ hasilpencarian = function(req, res) {
 };
 
 userpage = function (req, res) {
-	res.render('userpage.html',
+	res.render('./user/mainProfil.html',
 		{
 			name: req.params.username
 		}
@@ -36,7 +44,7 @@ userpage = function (req, res) {
 };
 
 placeDetail = function(req, res) {
-	res.render('placeDetail.html',
+	res.render('./user/placeDetail.html',
 		{
 			name: req.params.name,
 			id: req.params.id
@@ -47,23 +55,12 @@ placeDetail = function(req, res) {
 handler = {
 	home: home,
 	form: form,
-<<<<<<< HEAD
-	userpage: userpage,
-	placeDetail: placeDetail,    
-    formsign: formsign
-=======
-
 	placeDetail: placeDetail,
-    
     formsign: formsign,
-
+    userpage: userpage,
     login: login,
-
     berhasilregister: berhasilregister,
-
     hasilpencarian: hasilpencarian
->>>>>>> 4ffdf63148831e945cf03514b22085a3cdefc6b2
-
 };
 
 module.exports = handler;
