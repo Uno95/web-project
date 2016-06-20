@@ -2,16 +2,142 @@
 
 {% block title %}Tempat{% endblock %}
 
+{% block scriptAPI %}
+<script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map-canvas'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1NuSX2l9zO2Ya31HiBgIFPaShHu-Yrvk&callback=initMap"
+	async defer></script>
+
+{% endblock %}
+
 {% block cover %}
 <div class="photo">
 	<div class="place-coverImg" 
-		style="background-image:url(/cafe-in-pisa-1514560.jpg)">
-	</div>
+	style="background: url(../../imgres/restaurant.jpg);">
+</div>
 </div>
 {% endblock %}
 
 {% block content %}
 <div class="wrapper">
-	<h1>{{ name }} {{ id }}</h1>
+	<div class="row">
+		<div class="large-8 columns">
+			<div class="row">
+				<div class="small-3 columns">
+					<a class="th" href="">
+						<img src="../../imgres/user-cover.jpg" class="fotoprofil">
+					</a>
+					<p class="center">Jhon Cena</p>
+				</div>
+				<div class="small-9 columns">
+					<h3>{{ name }} {{ id }}</h3>
+					<h5>Jl.DoctorMansur , Medan</h5>
+					<span><i class="mdi mdi-home"></i>Home</span>
+					<span><i class="mdi mdi-home"></i>Home</span>
+					<span><i class="mdi mdi-home"></i>Home</span>
+					<span><i class="mdi mdi-home"></i>Home</span>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="large-12 columns text-center subjudul">
+					<h4>Daftar Menu</h4>
+					<hr>
+				</div>
+			</div>
+			<div class="large-2 columns card2">
+				<a href="#" class="th">
+					<div style="background: url(../../imgres/restaurant.jpg);" id="imgcap2" class="thumbnail"></div>		
+				</a>
+				<p>Nasi Goreng Special</p>
+				<p class="left">Rp.55.000,00</p>
+
+			</div>
+
+			<div class="large-2 columns card2">
+				<a href="#" class="th">
+					<div style="background: url(../../imgres/restaurant.jpg);" id="imgcap2" class="thumbnail"></div>		
+				</a>
+				<p>Nasi Goreng Special</p>
+				<p class="left">Rp.55.000,00</p>
+
+			</div>
+
+			<div class="large-2 columns card2">
+				<a href="#" class="th">
+					<div style="background: url(../../imgres/restaurant.jpg);" id="imgcap2" class="thumbnail"></div>		
+				</a>
+				<p>Nasi Goreng Special</p>
+				<p class="left">Rp.55.000,00</p>
+
+			</div>
+
+			<div class="row">
+				<div class="large-12 columns text-center subjudul">
+					<h4>Daftar Kupon</h4>
+					<hr>
+				</div>
+			</div>
+			<div class="large-2 columns card2">
+				<a href="#" class="th">
+					<div style="background: url(../../imgres/restaurant.jpg);" id="imgcap2" class="thumbnail"></div>		
+				</a>
+				<p>Nasi Goreng Special</p>
+				<p class="left">Rp.55.000,00</p>
+				<a href="#" data-reveal-id="myModal"><img src="../../imgres/MM_QRcode.png" alt="" class="imgqr"></a>
+				<div id="myModal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+					<h2 id="modalTitle">Scan this QrCode!</h2>
+					<div class="row large-12 imgqr" id="imgqr"><img src="../../imgres/MM_QRcode.png" alt=""></div>
+					<p>Nama Menu 	:	Nasi Goreng Special</p>
+					<p>Harga Menu 	:	Rp.50.000,00</p>
+					<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+				</div>
+			</div>
+
+			<div class="large-2 columns card2">
+				<a href="#" class="th">
+					<div style="background: url(../../imgres/restaurant.jpg);" id="imgcap2" class="thumbnail"></div>		
+				</a>
+				<p>Nasi Goreng Special</p>
+				<p class="left">Rp.55.000,00</p>
+				<a href="#" data-reveal-id="myModal"><img src="../../imgres/MM_QRcode.png" alt="" class="imgqr"></a>
+				<div id="myModal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+					<h2 id="modalTitle">Scan this QrCode!</h2>
+					<div class="row large-12 imgqr" id="imgqr"><img src="../../imgres/MM_QRcode.png" alt=""></div>
+					<p>Nama Menu 	:	Nasi Goreng Special</p>
+					<p>Harga Menu 	:	Rp.50.000,00</p>
+					<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+				</div>
+			</div>
+
+			<div class="large-2 columns card2">
+				<a href="#" class="th">
+					<div style="background: url(../../imgres/restaurant.jpg);" id="imgcap2" class="thumbnail"></div>		
+				</a>
+				<p>Nasi Goreng Special</p>
+				<p class="left">Rp.55.000,00</p>
+				<a href="#" data-reveal-id="myModal"><img src="../../imgres/MM_QRcode.png" alt="" class="imgqr"></a>
+				<div id="myModal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+					<h2 id="modalTitle">Scan this QrCode!</h2>
+					<div class="row large-12 imgqr" id="imgqr"><img src="../../imgres/MM_QRcode.png" alt=""></div>
+					<p>Nama Menu 	:	Nasi Goreng Special</p>
+					<p>Harga Menu 	:	Rp.50.000,00</p>
+					<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+				</div>
+			</div>
+		</div>
+		<div class="large-4 columns">
+		<div id="map-canvas" class="mapmap">syre</div>
+			<p>sdsad</p>
+		</div>
+	</div>
+
 </div>
 {% endblock %}
