@@ -5,19 +5,19 @@
 {% block cover %}
 <ul class="example-orbit" data-orbit>
 	<li>
-		<div style="background: url(http://placehold.it/2000x750);" id="imgcap"></div>
+		<div style="background: url(imgres/restaurant.jpg);" id="imgcap"></div>
 		<div class="orbit-caption">
 			Caption One.
 		</div>
 	</li>
 	<li class="active">
-		<div style="background: url(http://placehold.it/2000x750);" id="imgcap"></div>
+		<div style="background: url(imgres/restaurant3.jpg);" id="imgcap"></div>
 		<div class="orbit-caption">
 			Caption Two.
 		</div>
 	</li>
 	<li>
-		<div style="background: url(http://placehold.it/2000x750);" id="imgcap"></div>
+		<div style="background: url(imgres/restaurant2.jpg);" id="imgcap"></div>
 		<div class="orbit-caption">
 			Caption Three.
 		</div>
@@ -38,7 +38,7 @@
 		{% for item in data %}
 		<div class="large-4 columns card">
 			<a href="#" class="th">
-				<div style="background: url(http://placehold.it/2000x750);" id="imgcap2" class="thumbnail"></div>		
+				<div style="background: url(imgres/restaurant.jpg);" id="imgcap2" class="thumbnail"></div>		
 			</a>
 			<h5>{{ item.local.namaMenu }}</h5>
 			<p class="left">{{ item.local.hargaMenu }}</p>
@@ -57,76 +57,69 @@
 			<h3>Nothing to Display</h3>
 		</div>
 		{% endfor %}
-		<div class="large-4 columns card"></div>
+		<div class="large-4 columns"></div>
 		
 	</div>
 	<div class="row">
-		<div class="large-4 columns"><p></p></div>
-		<div class="large-4 columns">
-			<a href="#" class="button expand">Lihat lebih Banyak</a>
+		<div class="large-12 columns">
+			<a href="#" class="button expand btnnext">Lihat lebih Banyak</a>
 		</div>
-		<div class="large-4 columns"><p></p></div>
 	</div>
 </div>
 <div class="sec l2">
-		<div class="row">
+	<div class="row">
 		<div class="large-12 columns text-center">
-			<h2>Daftar Cafe & Restaurant</h2>
+			<h2 id="title">Daftar Cafe & Restaurant</h2>
 			<hr>
 		</div>
 	</div>
 	<div class="row">
 		<div class="large-4 columns card">
 			<a href="#" class="th">
-				<div style="background: url(http://placehold.it/2000x750);" id="imgcap2" class="thumbnail"></div>		
+				<div style="background: url(imgres/restaurant1.jpg);" id="imgcap2" class="thumbnail"></div>		
 			</a>
 			<div class="row">
-			<div class="columns">
-			<h5 class="left">KongBox</h5>
-			<h5 class="right">Ulasan</h5>
-			</div>
+				<div class="columns">
+					<h5 class="left">KongBox</h5>
+					<h5 class="right">Ulasan</h5>
+				</div>
 			</div>
 			<p>Jl.DoctorMansur , Medan</p>
-			<a href="#" class="button expand">Kunjungi</a>
+			<a href="/place/KongBox/1" class="button expand">Kunjungi</a>
 
 		</div>
 		<div class="large-4 columns card">
 			<a href="#" class="th">
-				<div style="background: url(http://placehold.it/2000x750);" id="imgcap2" class="thumbnail"></div>		
+				<div style="background: url(imgres/restaurant2.jpg);" id="imgcap2" class="thumbnail"></div>		
 			</a>
 			<div class="row">
-			<div class="columns">
-			<h5 class="left">KongBox</h5>
-			<h5 class="right">Ulasan</h5>
-			</div>
+				<div class="columns">
+					<h5 class="left">KongBox</h5>
+					<h5 class="right">Ulasan</h5>
+				</div>
 			</div>
 			<p>Jl.DoctorMansur , Medan</p>
-			<a href="#" class="button expand">Kunjungi</a>
+			<a href="/place/KongBox/1" class="button expand">Kunjungi</a>
 		</div>
 		<div class="large-4 columns card">
 			<a href="#" class="th">
-				<div style="background: url(http://placehold.it/2000x750);" id="imgcap2" class="thumbnail"></div>	
+				<div style="background: url(imgres/restaurant3.jpg);" id="imgcap2" class="thumbnail"></div>	
 			</a>
 			<div class="row">
-			<div class="columns">
-			<h5 class="left">KongBox</h5>
-			<h5 class="right">Ulasan</h5>
-			</div>
+				<div class="columns">
+					<h5 class="left">KongBox</h5>
+					<h5 class="right">Ulasan</h5>
+				</div>
 			</div>
 			<p>Jl.DoctorMansur , Medan</p>
-			<a href="#" class="button expand">Kunjungi</a>
+			<a href="/place/KongBox/1" class="button expand">Kunjungi</a>
 		</div>
 		
 	</div>
 	<div class="row">
-		<div class="large-4 columns"><p></p></div>
-		<div class="large-4 columns">
-			<a href="#" class="button expand">Lihat semua Cafe & Restaurant</a>
+		<div class="large-12 columns">
+			<a href="#" class="button expand btnnext">Lihat semua Cafe & Restaurant</a>
 		</div>
-		<div class="large-4 columns"><p></p></div>
 	</div>
-</div>
-<div class="sec l3">
-	<h1>Untuk Konten Bagian Kegtiga</h1>
 </div>
 {% endblock %}

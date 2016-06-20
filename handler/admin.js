@@ -1,4 +1,5 @@
 var	Kupon = require('../models/kupon');
+var	Menu = require('../models/menu');
 
 var handler, props;
 
@@ -26,6 +27,10 @@ addCoupon = function(req, res){
 	res.render('./admin/addCupon.html');
 };
 
+addMenu = function(req, res){
+	res.render('./admin/addMenu.html');
+};
+
 addingCoupon = function(req, res) {
 	var newCoupon = new Kupon();
 
@@ -48,6 +53,28 @@ addingCoupon = function(req, res) {
     });
 }
 
+addingMenu = function(req, res) {
+	var newMenu = new Menu();
+
+	newMenu.local.namaMenu 	= req.body.nameCoupon;
+	newMenu.local.hargaMenu	= req.body.price;
+	newMenu.local.kadaluarsa	= req.body.exp;
+	newMenu.local.gambar 		= req.body.cuponsImg;
+	newMenu.local.persyaratan = req.body.cond;
+	newMenu.local.namaCafe 	= req.body.cafeName;
+	newMenu.local.couponLink 	= req.body.couponLink;
+
+	// save the new coupon
+    newMenu.save(function(err) {
+        if (err){
+            console.log('Error in Saving coupon: '+err);
+            throw err;
+        }
+        console.log('menu succesful added!');
+        res.redirect('/admin/add-menu');
+    });
+}
+
 handler = {
 	ubahPassword: ubahPassword,
 	ubahProfil: ubahProfil,
@@ -55,7 +82,9 @@ handler = {
 	comment:comment,
 	admin: admin,
 	addCoupon: addCoupon,
+	addMenu: addMenu,
 	addingCoupon: addingCoupon,
+	addingMenu: addingMenu
 };
 
 module.exports = handler;
