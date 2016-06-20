@@ -126,7 +126,7 @@ html, body {
 }
 .card {
   width: 20rem;
-  height: 14rem;
+  height: 18rem;
   margin: 0 0.4rem 20px 0.4rem;
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
@@ -433,4 +433,7 @@ p.email {
 }
 #title{
   margin-top: 50px;
+}
+.kiri{
+  margin-top: 30px;
 }
