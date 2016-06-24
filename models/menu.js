@@ -5,10 +5,10 @@ var mongoose = require('mongoose');
 var userSchema = mongoose.Schema({
 
     local: {
-        namaMenu      : String,
-        hargaMenu     : String,
+        nama_Menu      : String,
+        harga_Menu     : String,
         gambar        : String,
-        namaCafe      : String,
+        nama_Cafe      : String,
     }
 });
 

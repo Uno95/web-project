@@ -20,6 +20,12 @@ router = function(app, passport){
 	    failureFlash : true // allow flash messages
 	}));
 
+	r.post('/newuseradmin',passport.authenticate('local-signup', {
+	    successRedirect : '/userpage', // redirect to the secure profile section
+	    failureRedirect : '/form', // redirect back to the signup page if there is an error
+	    failureFlash : true // allow flash messages
+	}));
+
 	r.post('/loginp',passport.authenticate('local-login', {
 	    successRedirect : '/userpage', // redirect to the secure profile section
 	    failureRedirect : '/login', // redirect back to the signup page if there is an error

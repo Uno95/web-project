@@ -13,7 +13,7 @@
   <div class="large-6 columns">
     <div class="signup-panel">
       <p class="welcome"> Daftarkan Usaha Anda!</p>
-      <form action="newuser" method="post">
+      <form action="newuseradmin" method="post">
         <div class="row collapse">
           <div class="small-2  columns">
             <span class="prefix"><i class="mdi mdi-home-modern"></i></span>
@@ -27,7 +27,7 @@
             <span class="prefix"><i class="mdi mdi-map-marker"></i></span>
           </div>
           <div class="small-10 columns ">
-            <input id="address" disabled  type="text"/>
+            <input id="address" name="address" type="text"/>
             <input type="hidden" name="lat" id="latitude" placeholder="Latitude"/>
             <input type="hidden" name="lng" id="longitude" placeholder="Longitude"/>
             <input type="hidden"  name="param" value="newadmin"/>
