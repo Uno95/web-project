@@ -1,35 +1,28 @@
-
+var handler, props;
+var items = []; 
 var	Kupon = require('../models/kupon');
-<<<<<<< HEAD
-var	Menu = require('../models/menu');
-var handler, props, i;
-var items = [], items2 = []; 
-=======
 var	User = require('../models/user');
 var	UserAdmin = require('../models/useradmin');
->>>>>>> ecb237c01019a5cfcd9e6af3780d3a18a764e654
 
 
 //show landing page
 home = function(req, res){
 	Kupon.find({}, function(err, kupon) {
-		Menu.find({}, function(err, menu) {
-			res.render('./user/home.html', {
-				dataKupon: kupon,
-				dataCafe: menu
-			});
-		})
+		if (err) {throw err};
+		//console.log(kupon);
+		res.render('./user/home.html', {
+			data:kupon
+		});
 	});
 
-	// Menu.find({}, function(err, menu) {
-	// 	if (err) {throw err};
-	// 	//console.log(kupon);
-	// 	for (i = 0; i<menu.length; i++){
-	// 		items2.push(menu[i]);
-	// 	}n
-	// });
-
-	//console.log(items2);
+	
+	// Kupon.each(function(err, doc) {
+	// if (doc != null) {
+	// 		console.log(doc);
+	// 	}else{
+	// 		callback();
+	// 	}
+	// })
 };
 
 //show form sign up for company

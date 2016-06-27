@@ -126,7 +126,7 @@ html, body {
 }
 .card {
   width: 20rem;
-  height: 21rem;
+  height: 21%;
   margin: 0 0.4rem 20px 0.4rem;
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
