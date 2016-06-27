@@ -1,8 +1,11 @@
 var handler, props;
-var items = []; 
+
 var	Kupon = require('../models/kupon');
+var	Menu = require('../models/menu');
 var	User = require('../models/user');
-var	UserAdmin = require('../models/useradmin');
+var handler, props, i;
+var items = [], items2 = []; 
+
 
 
 //show landing page
@@ -48,11 +51,12 @@ berhasilregister = function(req, res){
 
 //show search result page
 hasilpencarian = function(req, res) {
-	UserAdmin.find({}, function(err, useradmin) {
+	User.find({}, function(err, useradmin) {
 		if (err) {throw err};
+		console.log(useradmin);
 		//console.log(kupon);
 		res.render('./user/hasilpencarian.html', {
-			data:useradmin,
+			data: useradmin,
 			name: req.params.name
 		});
 		/*res.render('./user/hasilpencarian.html',

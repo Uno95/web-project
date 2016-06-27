@@ -9,20 +9,20 @@ var longitude=[];
 var loc = $("#resName").text();
 
 
-var dataAPI = "https://api.mlab.com/api/1/databases/d_coups/collections/useradmins?apiKey=JMOq37wA281RDQ8r8DtitIiBh12NlKky";
+var dataAPI = "https://api.mlab.com/api/1/databases/d_coups/collections/users?apiKey=JMOq37wA281RDQ8r8DtitIiBh12NlKky";
 
 $.getJSON(dataAPI, function(json) {
 	$.each(json, function(i, field){
 		obj.push(field);
-		locProps.lat=parseFloat(field.local.lat);
-		locProps.lng=parseFloat(field.local.lng);
+		locProps.lat=parseFloat(field.admin.lat);
+		locProps.lng=parseFloat(field.admin.lng);
 		
 		//console.log(latitude + " " + longitude);
 		locationObj.push(locProps);
 	});
 	for (var x = 0; x < obj.length; x++) {
 		initMap(lt,lg,obj.length);
-			setMarkers(parseFloat(obj[x].local.lat),parseFloat(obj[x].local.lng),obj.length);
+			setMarkers(parseFloat(obj[x].admin.lat),parseFloat(obj[x].admin.lng),obj.length);
 		}
 //	console.log(locationObj);
 	console.log(obj);
