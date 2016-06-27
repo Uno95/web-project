@@ -13,6 +13,20 @@ var userSchema = mongoose.Schema({
         fullname     : String,
         address      : String,
         phone     	 : String,
+    },
+    admin: {
+        email         : String,
+        password      : String,
+        companyname   : String,
+        menus         : {
+            id_menu   : [{ type: mongoose.Schema.ObjectId, ref: 'Menus' }]
+        },
+        address       : String,
+        adminname     : String,
+        nomorhp       : String,
+        keterangan    : String,
+        lat           : String,
+        lng           : String,
     }
 });
 

@@ -3,7 +3,6 @@ var LocalStrategy    = require('passport-local').Strategy;
 
 // load up the user model
 var User       = require('../models/user');
-var UserAdmin       = require('../models/useradmin');
 
 module.exports = function(passport) {
 
@@ -26,7 +25,7 @@ module.exports = function(passport) {
     });
 
     // =========================================================================
-    // LOCAL LOGIN =============================================================
+    // USER LOGIN =============================================================
     // =========================================================================
     passport.use('local-login', new LocalStrategy({
         // by default, local strategy uses username and password, we will override with email
@@ -41,6 +40,41 @@ module.exports = function(passport) {
         // asynchronous
         process.nextTick(function() {
             User.findOne({ 'local.email' :  email }, function(err, user) {
+                // if there are any errors, return the error
+                if (err)
+                    return done(err);
+
+                // if no user is found, return the message
+                if (!user)
+                    return done(null, false, req.flash('loginMessage', 'No user found.'));
+                    console.log("No user found");
+                if (!user.validPassword(password))
+                    return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.'));
+
+                // all is well, return user
+                else
+                    return done(null, user);
+            });
+        });
+
+    }));
+
+    // =========================================================================
+    // ADMIN LOGIN =============================================================
+    // =========================================================================
+    passport.use('admin-login', new LocalStrategy({
+        // by default, local strategy uses username and password, we will override with email
+        usernameField : 'email',
+        passwordField : 'password',
+        passReqToCallback : true // allows us to pass in the req from our route (lets us check if a user is logged in or not)
+    },
+    function(req, email, password, done) {
+        if (email)
+            email = email.toLowerCase(); // Use lower-case e-mails to avoid case-sensitive e-mail matching
+
+        // asynchronous
+        process.nextTick(function() {
+            User.findOne({ 'admin.email' :  email }, function(err, user) {
                 // if there are any errors, return the error
                 if (err)
                     return done(err);
@@ -88,21 +122,20 @@ module.exports = function(passport) {
                     } else {
 
                         var param            = req.body.param;
+                        var newUser          = new User();
                         // create the user
                         if(param=="newadmin"){
-                            var newUser            = new UserAdmin();
-                            newUser.local.email    = email;
-                            newUser.local.password = newUser.generateHash(password);
-                            newUser.local.companyname = req.body.companyname;
-                            newUser.local.adminname = req.body.adminname;
-                            newUser.local.address  = req.body.address;
-                            newUser.local.nomorhp    = req.body.nomorhp;
-                            newUser.local.keterangan   = req.body.keterangan;
-                            newUser.local.lat   = req.body.lat;
-                            newUser.local.lng   = req.body.lng;
+                            newUser.admin.email       = email;
+                            newUser.admin.password    = newUser.generateHash(password);
+                            newUser.admin.companyname = req.body.companyname;
+                            newUser.admin.adminname   = req.body.adminname;
+                            newUser.admin.address     = req.body.address;
+                            newUser.admin.nomorhp     = req.body.nomorhp;
+                            newUser.admin.keterangan  = req.body.keterangan;
+                            newUser.admin.lat         = req.body.lat;
+                            newUser.admin.lng         = req.body.lng;
                         }
                         else {
-                            var newUser            = new User();
                             newUser.local.email    = email;
                             newUser.local.password = newUser.generateHash(password);
                             newUser.local.username = req.body.username;

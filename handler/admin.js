@@ -23,6 +23,10 @@ admin = function(req, res){
 	res.render('./admin/admin.html');
 };
 
+login = function(req, res){
+	res.render('./admin/login.html');
+};
+
 addCoupon = function(req, res){
 	res.render('./admin/addCupon.html');
 };
@@ -81,6 +85,7 @@ handler = {
 	profil: profil,
 	comment:comment,
 	admin: admin,
+	login: login,
 	addCoupon: addCoupon,
 	addMenu: addMenu,
 	addingCoupon: addingCoupon,

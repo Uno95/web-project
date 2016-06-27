@@ -25,6 +25,12 @@ router = function(app, passport){
 	    failureRedirect : '/login', // redirect back to the signup page if there is an error
 	    failureFlash : true // allow flash messages
 	}));
+
+	app.get('/logout', function(req, res) {
+        req.logout();
+        res.redirect('/');
+    });
+
 	app.use(r);
 };
 module.exports = router;

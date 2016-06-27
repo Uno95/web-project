@@ -9,6 +9,9 @@ var userSchema = mongoose.Schema({
         hargaMenu     : String,
         gambar        : String,
         namaCafe      : String,
+        cafes         : {
+            id_cafes   : [{ type: mongoose.Schema.ObjectId, ref: 'User' }]
+        },
     }
 });
 

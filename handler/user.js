@@ -8,27 +8,23 @@ var items = [], items2 = [];
 //show landing page
 home = function(req, res){
 	Kupon.find({}, function(err, kupon) {
-		if (err) {throw err};
-		//console.log(kupon);
-		for (i = 0; i<kupon.length; i++){
-			items.push(kupon[i]);
-		}
+		Menu.find({}, function(err, menu) {
+			res.render('./user/home.html', {
+				dataKupon: kupon,
+				dataCafe: menu
+			});
+		})
 	});
 
-	Menu.find({}, function(err, menu) {
-		if (err) {throw err};
-		//console.log(kupon);
-		for (i = 0; i<menu.length; i++){
-			items2.push(menu[i]);
-		}
-	});
+	// Menu.find({}, function(err, menu) {
+	// 	if (err) {throw err};
+	// 	//console.log(kupon);
+	// 	for (i = 0; i<menu.length; i++){
+	// 		items2.push(menu[i]);
+	// 	}n
+	// });
 
 	//console.log(items2);
-
-	res.render('./user/home.html', {
-		dataKupon: items,
-		dataCafe: items2
-	});
 };
 
 //show form sign up for company
