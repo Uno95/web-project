@@ -9,6 +9,9 @@
         		<div class="r3_counter_box">
                     <i class="pull-left fa fa-thumbs-up icon-rounded"></i>
                     <div class="stats">
+                    {% if user.admin.adminname %}
+                    <p>{{ user.admin.adminname }}</p>
+                    {% endif %}
                       <h5><strong>45%</strong></h5>
                       <span>New Orders</span>
                     </div>

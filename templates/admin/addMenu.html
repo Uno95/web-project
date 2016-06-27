@@ -21,6 +21,9 @@
           <div class="row">
             <div class="large-12 columns">
               <label>Harga
+                <!-- <select name="menuID">
+                  <option value={{_id}}>name menu</option>
+                </select> -->
                 <input type="text" name="price"
                   placeholder="Masukkan Harga Kupon" id="inp"/>
               </label>
@@ -33,7 +36,8 @@
               </label>
             </div>
           </div>
-          <input type="hidden" name="cafeName" value="noname">
+          <input type="hidden" name="idName" value="{{ user.id }}">
+          <input type="hidden" name="cafeName" value="{{ user.admin.adminname }}">
           <input type="hidden" name="couponLink" value="testLinkEncoded">
           <input type="submit" class="button" value="Tambahkan">
           <a href="profil" class="button secondary">Batal</a>

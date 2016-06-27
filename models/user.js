@@ -18,9 +18,7 @@ var userSchema = mongoose.Schema({
         email         : String,
         password      : String,
         companyname   : String,
-        menus         : {
-            id_menu   : [{ type: mongoose.Schema.ObjectId, ref: 'Menus' }]
-        },
+        id_menu       : [String],
         address       : String,
         adminname     : String,
         nomorhp       : String,

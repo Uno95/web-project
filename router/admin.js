@@ -11,9 +11,9 @@ router = function(app, passport){
 	r.get('/admin/ubahProfil', h.ubahProfil);
 	r.get('/admin/ubahPassword', h.ubahPassword);
 	r.get('/admin/add-coupon', h.addCoupon);
-	r.get('/admin/add-menu', h.addMenu);
+	r.get('/admin/add-menu', isLoggedin, h.addMenu);
 	r.post('/admin/adding-coupon', h.addingCoupon);
-	r.post('/admin/adding-menu', h.addingMenu);
+	r.post('/admin/adding-menu', isLoggedin, h.addingMenu);
 
 	r.post('/doAdminLogin',passport.authenticate('admin-login', {
 	    successRedirect : '/admin', // redirect to the secure profile section
@@ -32,7 +32,11 @@ router = function(app, passport){
 module.exports = router;
 
 function isLoggedin(req,res,next){
-	if(req.isAuthenticated())
+
+	res.locals.login = req.isAuthenticated();
+	if(res.locals.login){
+		res.locals.user = req.user;
 		return next();
+	}
 	res.redirect('/admin/login');
 }
