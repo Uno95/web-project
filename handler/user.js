@@ -1,8 +1,13 @@
 
 var	Kupon = require('../models/kupon');
+<<<<<<< HEAD
 var	Menu = require('../models/menu');
 var handler, props, i;
 var items = [], items2 = []; 
+=======
+var	User = require('../models/user');
+var	UserAdmin = require('../models/useradmin');
+>>>>>>> ecb237c01019a5cfcd9e6af3780d3a18a764e654
 
 
 //show landing page
@@ -50,11 +55,20 @@ berhasilregister = function(req, res){
 
 //show search result page
 hasilpencarian = function(req, res) {
-	res.render('./user/hasilpencarian.html',
+	UserAdmin.find({}, function(err, useradmin) {
+		if (err) {throw err};
+		//console.log(kupon);
+		res.render('./user/hasilpencarian.html', {
+			data:useradmin,
+			name: req.params.name
+		});
+		/*res.render('./user/hasilpencarian.html',
 		{
 			name: req.params.name
 		}
-	);
+	);*/
+	});
+	
 };
 
 userpage = function (req, res) {

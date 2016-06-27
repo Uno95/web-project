@@ -5,13 +5,17 @@ var mongoose = require('mongoose');
 var userSchema = mongoose.Schema({
 
     local: {
-        namaMenu      : String,
-        hargaMenu     : String,
+        nama_Menu      : String,
+        harga_Menu     : String,
         gambar        : String,
+<<<<<<< HEAD
         namaCafe      : String,
         cafes         : {
             id_cafes   : [{ type: mongoose.Schema.ObjectId, ref: 'User' }]
         },
+=======
+        nama_Cafe      : String,
+>>>>>>> ecb237c01019a5cfcd9e6af3780d3a18a764e654
     }
 });
 
