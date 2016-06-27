@@ -5,7 +5,7 @@ function initMap(lt, lg,len) {
   });
 
   for(i=0;i<len;i++){
-      setMarkers(map,parseFloat(obj[i].local.lat),parseFloat(obj[i].local.lng),len);
+      setMarkers(map,parseFloat(obj[i].admin.lat),parseFloat(obj[i].admin.lng),len);
       //console.log(parseInt(latitude[i]),parseInt(longitude[i]));
   }
 }
