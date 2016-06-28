@@ -10,7 +10,7 @@ router = function(app, passport){
 	r.get('/admin/profil', h.profil);
 	r.get('/admin/ubahProfil', h.ubahProfil);
 	r.get('/admin/ubahPassword', h.ubahPassword);
-	r.get('/admin/add-coupon', h.addCoupon);
+	r.get('/admin/add-coupon', isLoggedin, h.addCoupon);
 	r.get('/admin/add-menu', isLoggedin, h.addMenu);
 	r.post('/admin/adding-coupon', h.addingCoupon);
 	r.post('/admin/adding-menu', isLoggedin, h.addingMenu);

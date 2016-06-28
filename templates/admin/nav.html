@@ -7,7 +7,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">ADMIN</a>
+        {% if user.admin.adminname %}
+	        <a class="navbar-brand" href="#">{{user.admin.adminname }}</a>
+	    {% else %}
+	        <a class="navbar-brand" href="#">Admin</a>
+        {% endif %}
     </div>
     <!-- /.navbar-header -->
     <ul class="nav navbar-nav navbar-right">

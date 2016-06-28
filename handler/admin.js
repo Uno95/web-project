@@ -30,7 +30,12 @@ login = function(req, res){
 };
 
 addCoupon = function(req, res){
-	res.render('./admin/addCupon.html');
+	User.find({}, function(err, menu) {
+		if (err) {throw err};
+		res.render('./admin/addCupon.html',{
+			data: menu
+		});
+	})
 };
 
 addMenu = function(req, res){
@@ -40,15 +45,13 @@ addMenu = function(req, res){
 addingCoupon = function(req, res) {
 	var newCoupon = new Kupon();
 
-	newCoupon.local.namaMenu 	= req.body.nameCoupon;
+	newCoupon.idm				= req.body.nameCoupon;
 	newCoupon.local.hargaMenu	= req.body.price;
 	newCoupon.local.kadaluarsa	= req.body.exp;
 	newCoupon.local.gambar 		= req.body.cuponsImg;
 	newCoupon.local.persyaratan = req.body.cond;
 	newCoupon.local.namaCafe 	= req.body.cafeName;
 	newCoupon.local.couponLink 	= req.body.couponLink;
-	newCoupon.local.id_cafes 		= req.body.idName;
-	newCoupon.local.namaCafe 		= req.body.cafeName;
 
 	// save the new coupon
     newCoupon.save(function(err) {
@@ -69,7 +72,7 @@ addingMenu = function(req, res) {
 	newMenu.local.nama_Menu 	= req.body.nameCoupon;
 	newMenu.local.harga_Menu	= req.body.price;
 	newMenu.local.gambar 		= req.body.cuponsImg;
-	newMenu.local.id_cafes 		= req.body.idName;
+	newMenu.idc 				= req.body.idName;
 	newMenu.local.namaCafe 		= req.body.cafeName;
 
 	// save the new menu
@@ -78,28 +81,35 @@ addingMenu = function(req, res) {
             console.log('Error in Saving coupon: '+err);
             throw err;
         }
+
         console.log('menu succesful added!');
         console.log(req.body.idName);
-        User.findById(req.body.idName, function(err,userMenuID){
+
+    });
+
+    //Get id from logged user
+    User.findOne({'_id': req.body.idName}, function(err,getfrom){
+    	if (err) {
+    		console.log('Error in Saving coupon: '+err);
+        	throw err;
+    	}
+
+    	//pushing menu ref into user
+    	getfrom.admin.id_menu.push({
+    		idc: newMenu._id,
+    		nama_menu: newMenu.local.nama_Menu
+    	});
+	    getfrom.save(function(err){
         	if (err) {
         		console.log('Error in Saving coupon: '+err);
             	throw err;
         	}
-        	/*newMenu.id*/
-        	userMenuID.admin.id_menu = userMenuID.admin.id_menu + " " + newMenu.id;
-        	/*userMenuID.admin.id_menu += newMenu.id;*/
-		    userMenuID.save(function(err){
-	        	if (err) {
-	        		console.log('Error in Saving coupon: '+err);
-	            	throw err;
-	        	}
-	        	console.log(userMenuID.admin.id_menu);
-	        });
+        	console.log("sdfs " +  newMenu.id);
         });
-        
-
-      	res.redirect('/admin/add-menu');
     });
+
+   	res.redirect('/admin/add-menu');
+
 }
 
 handler = {

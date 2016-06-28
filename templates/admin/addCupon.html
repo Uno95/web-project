@@ -13,8 +13,14 @@
           <div class="row">
               <div class="large-12 columns">
                 <label>Nama Menu
-                  <input type="text" name="nameCoupon"
-                    placeholder="Masukkan Nama Menu" id="inp"/>
+                  <select name="nameCoupon">
+                    {% for item in data %}
+                      {% set i = item.admin.id_menu %}
+                      {% for x in i %}
+                        <option value="{{ x.idc }}">{{ x.nama_menu }}</option>
+                      {% endfor %}
+                    {% endfor %}
+                  </select>
                 </label>
               </div>
           </div>
@@ -49,7 +55,6 @@
           </div>
           <input type="hidden" name="idName" value="{{ user.id }}">
           <input type="hidden" name="cafeName" value="{{ user.admin.adminname }}">
-          <input type="hidden" name="cafeName" value="noname">
           <input type="hidden" name="couponLink" value="testLinkEncoded">
           <input type="submit" class="button" value="Tambahkan">
           <a href="profil" class="button secondary">Batal</a>

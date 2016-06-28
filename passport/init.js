@@ -124,26 +124,15 @@ module.exports = function(passport) {
                         var param            = req.body.param;
                         var newUser          = new User();
                         // create the user
-                        if(param=="newadmin"){
-                            newUser.admin.email       = email;
-                            newUser.admin.password    = newUser.generateHash(password);
-                            newUser.admin.companyname = req.body.companyname;
-                            newUser.admin.adminname   = req.body.adminname;
-                            newUser.admin.address     = req.body.address;
-                            newUser.admin.nomorhp     = req.body.nomorhp;
-                            newUser.admin.keterangan  = req.body.keterangan;
-                            newUser.admin.lat         = req.body.lat;
-                            newUser.admin.lng         = req.body.lng;
-                        }
-                        else {
-                            newUser.local.email    = email;
-                            newUser.local.password = newUser.generateHash(password);
-                            newUser.local.username = req.body.username;
-                            newUser.local.fullname = req.body.fullname;
-                            newUser.local.address  = req.body.address;
-                            newUser.local.phone    = req.body.phone;
-                            newUser.local.repass   = req.body.repass;
-                        }
+                        newUser.admin.email       = email;
+                        newUser.admin.password    = newUser.generateHash(password);
+                        newUser.admin.companyname = req.body.companyname;
+                        newUser.admin.adminname   = req.body.adminname;
+                        newUser.admin.address     = req.body.address;
+                        newUser.admin.nomorhp     = req.body.nomorhp;
+                        newUser.admin.keterangan  = req.body.keterangan;
+                        newUser.admin.lat         = req.body.lat;
+                        newUser.admin.lng         = req.body.lng;
 
                         
 

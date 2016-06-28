@@ -1,17 +1,21 @@
 // load the things we need
 var mongoose = require('mongoose');
 
-// define the schema for our user model
+var idMenu = mongoose.Schema({
+    idm : String
+});
+
 var userSchema = mongoose.Schema({
 
     local: {
+        id_menu       : [idMenu],
         namaMenu      : String,
         hargaMenu     : String,
         kadaluarsa    : String,
         gambar        : String,
         persyaratan   : String,
         namaCafe      : String,
-        couponLink    : String,
+        couponLink    : String
     }
 });
 

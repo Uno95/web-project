@@ -4,7 +4,8 @@ function initMap(lt, lg,len) {
     center: {lat: lt, lng: lg}
   });
 
-  for(i=0;i<len;i++){
+  for(i=0;i< len;i++){
+      console.log("lat: "+ obj[i].admin.lat);
       setMarkers(map,parseFloat(obj[i].admin.lat),parseFloat(obj[i].admin.lng),len);
       //console.log(parseInt(latitude[i]),parseInt(longitude[i]));
   }
@@ -23,7 +24,7 @@ function setMarkers(map,lt,lg,len) {
   // Origins, anchor positions and coordinates of the marker increase in the X
   // direction to the right and in the Y direction down.
   var image = {
-    url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+    url: 'https://lh3.ggpht.com/QZjCEmi1T4U62vjYCQ-78KDEYwPfFXSv27_XU-MmE9fNtprQ_Z3KlyrZJOw3SrdTmw=w300',
     // This marker is 20 pixels wide by 32 pixels high.
     size: new google.maps.Size(20, 32),
     // The origin for this image is (0, 0).
