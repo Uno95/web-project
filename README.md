@@ -28,6 +28,15 @@ D'Coups menggunakan [Node.js](https://nodejs.org/) v4+
 
 untuk menjalankan aplikasi, buka CLI dan jalankan perintah berikut:
 
+untuk mengakses halaman admin kita dapat menuju url
+> [base_url]/admin
+
+maka akan dialihkan kehalaman login. Setelah itu login dengan akun berikut:
+
+```sh
+Username: pizzahut@gmail.com
+Password: 12345p
+```
 
 ```sh
 $ git clone [git-repo-url] dcoups
