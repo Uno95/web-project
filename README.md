@@ -28,6 +28,12 @@ D'Coups menggunakan [Node.js](https://nodejs.org/) v4+
 
 untuk menjalankan aplikasi, buka CLI dan jalankan perintah berikut:
 
+```sh
+$ git clone [git-repo-url] dcoups
+$ cd dcoups
+$ node index.js
+```
+
 untuk mengakses halaman admin kita dapat menuju url
 > [base_url]/admin
 
@@ -38,11 +44,6 @@ Username: pizzahut@gmail.com
 Password: 12345p
 ```
 
-```sh
-$ git clone [git-repo-url] dcoups
-$ cd dcoups
-$ node index.js
-```
 **url repositori** - https://github.com/Uno95/web-project.git
 ### API
 
