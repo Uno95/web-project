@@ -6,7 +6,6 @@ var express = require('express'),
 router = function(app, passport){
 	r.get('/admin', isLoggedin, h.admin);
 	r.get('/admin/login', h.login);
-	r.get('/admin/comment', h.comment);
 	r.get('/admin/profil', h.profil);
 	r.get('/admin/ubahProfil', h.ubahProfil);
 	r.get('/admin/ubahPassword', h.ubahPassword);

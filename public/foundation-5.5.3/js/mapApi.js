@@ -24,9 +24,9 @@ function setMarkers(map,lt,lg,len) {
   // Origins, anchor positions and coordinates of the marker increase in the X
   // direction to the right and in the Y direction down.
   var image = {
-    url: 'https://lh3.ggpht.com/QZjCEmi1T4U62vjYCQ-78KDEYwPfFXSv27_XU-MmE9fNtprQ_Z3KlyrZJOw3SrdTmw=w300',
+    url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
     // This marker is 20 pixels wide by 32 pixels high.
-    size: new google.maps.Size(20, 32),
+    size: new google.maps.Size(80, 92),
     // The origin for this image is (0, 0).
     origin: new google.maps.Point(0, 0),
     // The anchor for this image is the base of the flagpole at (0, 32).
@@ -47,6 +47,7 @@ function setMarkers(map,lt,lg,len) {
         shape: shape,
         title: loc
       });
+      console.log(lt,lg);
     }
 
 }

@@ -16,10 +16,6 @@ profil = function(req, res){
 	res.render('./admin/profil.html');
 };
 
-comment = function(req, res){
-	res.render('./admin/comment.html');
-};
-
 admin = function(req, res){
 	res.render('./admin/admin.html',{username: req.user.adminname});
 	console.log(req.user.adminname);
@@ -129,7 +125,6 @@ handler = {
 	ubahPassword: ubahPassword,
 	ubahProfil: ubahProfil,
 	profil: profil,
-	comment:comment,
 	admin: admin,
 	login: login,
 	addCoupon: addCoupon,
