@@ -20,15 +20,10 @@ $.getJSON(dataAPI, function(json) {
 		//console.log(latitude + " " + longitude);
 		locationObj.push(locProps);
 	});
-	for (var x = 0; x < obj.length; x++) {
-		initMap(lt,lg,obj.length);
-			setMarkers(parseFloat(obj[x].admin.lat),parseFloat(obj[x].admin.lng),obj.length);
-		}
-//	console.log(locationObj);
-	console.log(obj);
+	console.log(obj.length);
+	initMap(lt,lg,obj.length);
+	//console.log(obj);
 		
-		/*console.log(obj);*/
-	
 });
 
 if(loc == "Sumatera Utara"){

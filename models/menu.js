@@ -2,6 +2,8 @@
 var mongoose = require('mongoose');
 
 // define the schema for our user model
+
+
 var userSchema = mongoose.Schema({
 
     local: {
@@ -9,8 +11,7 @@ var userSchema = mongoose.Schema({
         harga_Menu     : String,
         gambar        : String,
         namaCafe      : String,
-        id_cafes   : [{type: String}]
-        
+        id_cafes   		: String        
     }
 });
 

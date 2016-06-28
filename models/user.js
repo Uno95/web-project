@@ -2,23 +2,19 @@
 var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 
+
+var idMenuSchema = mongoose.Schema({
+    idc : String,
+    nama_menu: String
+});
+
 // define the schema for our user model
 var userSchema = mongoose.Schema({
-
-    local: {
-        email        : String,
-        password     : String,
-        repass     	 : String,
-        username     : String,
-        fullname     : String,
-        address      : String,
-        phone     	 : String,
-    },
     admin: {
         email         : String,
         password      : String,
         companyname   : String,
-        id_menu       : [String],
+        id_menu       : [idMenuSchema],
         address       : String,
         adminname     : String,
         nomorhp       : String,
