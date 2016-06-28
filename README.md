@@ -3,7 +3,7 @@
 <h2>Package Requierments</h2>
 
 <pre>
-  <code>npm install --save <package_name></code>
+  <code>npm install --save [package_name]</code>
 </pre>
 
 <ul>
