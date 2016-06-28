@@ -49,6 +49,8 @@ addingCoupon = function(req, res) {
 	newCoupon.local.namaCafe 	= req.body.cafeName;
 	newCoupon.local.couponLink 	= req.body.couponLink;
 
+	console.log(req.body.nameCoupon);
+
 	// save the new coupon
     newCoupon.save(function(err) {
         if (err){
@@ -56,7 +58,9 @@ addingCoupon = function(req, res) {
             throw err;
         }
         console.log('coupon succesful added!');
-        console.log(req.body.idName);
+        
+		        
+
         res.redirect('/admin/add-coupon');
     });
 }
