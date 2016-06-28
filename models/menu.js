@@ -9,7 +9,7 @@ var userSchema = mongoose.Schema({
         harga_Menu     : String,
         gambar        : String,
         namaCafe      : String,
-        id_cafes   : [String]
+        id_cafes   : [{type: String}]
         
     }
 });

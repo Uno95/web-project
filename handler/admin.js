@@ -86,7 +86,7 @@ addingMenu = function(req, res) {
             	throw err;
         	}
         	/*newMenu.id*/
-        	userMenuID.admin.id_menu = userMenuID.admin.id_menu + " " + newMenu.id;
+        	userMenuID.admin.id_menu = newMenu.id;
         	/*userMenuID.admin.id_menu += newMenu.id;*/
 		    userMenuID.save(function(err){
 	        	if (err) {
