@@ -12,10 +12,13 @@ var items = [], items2 = [];
 home = function(req, res){
 	Kupon.find({}, function(err, kupon) {
 		if (err) {throw err};
-		//console.log(kupon);
-		res.render('./user/home.html', {
-			data:kupon
-		});
+		User.find({}, function(err, admin) {
+			//console.log(kupon);
+			res.render('./user/home.html', {
+				data1:kupon,
+				data2:admin
+			});
+		})		
 	});
 
 	

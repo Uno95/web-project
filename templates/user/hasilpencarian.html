@@ -23,8 +23,8 @@
 <div class="wrapper">
 	<div id="resLbl">Hasil Pencarian : <span id="resName">{{ name }}</span></div>
 	<div class="row">
-	{% for item in data %}
-	{% if item.admin.address.match(name) == name %}
+		{% for item in data %}
+		{% if item.admin.address.match(name) == name %}
 		<div class="large-4 columns card">
 			<a href="#" class="th">
 				<img src="http://placehold.it/2000x750" alt="" class="thumbnail">
@@ -44,10 +44,11 @@
 			<p class="left">Rp.55.000,00</p>
 			<a href="#" class="button expand">Buy</a>
 		</div>
+		{% endif %}
 		{% else %}
 			<div class="large-4 columns ">Nothing to display!</div>
-		{% endif %}
 		{% endfor %}
+		<div class="large-4 columns"></div>
 	</div>
 </div>
 {% endblock %}
